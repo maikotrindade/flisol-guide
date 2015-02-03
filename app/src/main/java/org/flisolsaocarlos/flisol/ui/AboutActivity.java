@@ -26,8 +26,8 @@ public class AboutActivity extends Activity implements View.OnClickListener {
         Button aboutButton = (Button) findViewById(R.id.aboutBtn);
         aboutButton.setOnClickListener(this);
 
-        Button githubButton = (Button) findViewById(R.id.githubBtn);
-        githubButton.setOnClickListener(this);
+        Button gitoriousButton = (Button) findViewById(R.id.gitoriousBtn);
+        gitoriousButton.setOnClickListener(this);
 
         Button websiteButton = (Button) findViewById(R.id.websiteBtn);
         websiteButton.setOnClickListener(this);
@@ -50,9 +50,9 @@ public class AboutActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 overridePendingTransition(R.anim.start_in, R.anim.start_out);
                 break;
-            case R.id.githubBtn:
-                final String githubUrl = getResources().getString(R.string.github_project_link);
-                i.setData(Uri.parse(githubUrl));
+            case R.id.gitoriousBtn:
+                final String gitoriousUrl = getResources().getString(R.string.gitorious_project_link);
+                i.setData(Uri.parse(gitoriousUrl));
                 startActivity(i);
                 break;
             case R.id.websiteBtn:
