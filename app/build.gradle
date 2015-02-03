@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion '21.1.2'
+    defaultConfig {
+        applicationId "org.flisolsaocarlos.flisol"
+        minSdkVersion 15
+        targetSdkVersion 16
+        versionCode 3
+        versionName "0.8"
+    }
+    buildTypes {
+        release {
+        }
+        debug {
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.android.gms:play-services-maps:6.+'
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.google.code.gson:gson:2.2.4'
+}

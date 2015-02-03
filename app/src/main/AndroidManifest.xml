@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.flisolsaocarlos.flisol"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="0.1" >
+
+    <permission
+        android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".service.ApplicationService"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Flisol" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_api_key" />
+
+        <activity
+            android:name=".ui.DashboardActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.LectureListActivity"
+            android:label="Lectures" />
+        <activity
+            android:name=".ui.CourseListActivity"
+            android:label="@string/courses" />
+        <activity
+            android:name=".ui.InstallFestActivity"
+            android:label="@string/install_fest" />
+        <activity
+            android:name=".ui.LectureActivity"
+            android:label="@string/lecture" />
+        <activity
+            android:name=".ui.LocationFragmentActivity"
+            android:label="@string/location"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name=".ui.SupportersListActivity"
+            android:label="@string/supporters" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:label="@string/about" />
+        <activity
+            android:name=".ui.WebActivity"
+            android:label="" />
+        <activity
+            android:name=".ui.ScheduleActivity"
+            android:label="@string/schedule" />
+        <activity
+            android:name=".ui.CourseActivity"
+            android:label="@string/title_activity_course" />
+        <activity
+            android:name=".ui.AboutAppActivity"
+            android:label="@string/title_activity_about_app" />
+        <activity
+            android:name=".ui.SoftwareListActivity"
+            android:label="@string/title_activity_software_list" >
+        </activity>
+    </application>
+
+</manifest>

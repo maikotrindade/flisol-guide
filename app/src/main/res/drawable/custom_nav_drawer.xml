@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:state_pressed="true">-->
+    <!--<shape>-->
+    <!--<solid android:color="#FFB300" />-->
+    <!--</shape>-->
+    <!--</item>-->
+
+    <item android:drawable="@drawable/ab_solid_flisol" android:state_focused="true" />
+
+    <!--<item android:state_pressed="false">-->
+    <!--<shape xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--<solid android:color="#1FB300" />-->
+    <!--</shape>-->
+    <!--</item>-->
+
+    <!--<item android:state_focused="false">-->
+    <!--<shape xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--<solid android:color="#FF0000" />-->
+    <!--</shape>-->
+    <!--</item>-->
+</selector>

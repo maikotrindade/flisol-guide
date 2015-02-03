@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    tools:context="br.trindade.flisol.ui.DashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_flisol" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15">
+
+        <Button
+            android:id="@+id/scheduleBtn"
+            style="@style/dashboardButton"
+            android:text="@string/schedule" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15">
+
+        <Button
+            android:id="@+id/lectureBtn"
+            style="@style/dashboardButton"
+            android:layout_marginRight="2sp"
+            android:text="@string/lectures" />
+
+        <Button
+            android:id="@+id/courseBtn"
+            style="@style/dashboardButton"
+            android:layout_marginLeft="2sp"
+            android:text="@string/courses" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15">
+
+        <Button
+            android:id="@+id/installFestBtn"
+            style="@style/dashboardButton"
+            android:layout_marginRight="2sp"
+            android:text="@string/install_fest" />
+
+        <Button
+            android:id="@+id/locationBtn"
+            style="@style/dashboardButton"
+            android:layout_marginLeft="2sp"
+            android:text="@string/location" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15">
+
+        <Button
+            android:id="@+id/aboutBtn"
+            style="@style/dashboardButton"
+            android:layout_marginRight="2sp"
+            android:text="@string/about" />
+
+        <Button
+            android:id="@+id/supportersBtn"
+            style="@style/dashboardButton"
+            android:layout_marginLeft="2sp"
+            android:text="@string/supporters" />
+    </LinearLayout>
+</LinearLayout>
+
+
