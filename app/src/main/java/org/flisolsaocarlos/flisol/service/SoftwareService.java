@@ -1,7 +1,7 @@
 package org.flisolsaocarlos.flisol.service;
 
 import org.flisolsaocarlos.flisol.model.Software;
-import org.flisolsaocarlos.flisol.provider.SoftwareDaoImpl;
+import org.flisolsaocarlos.flisol.provider.impl.SoftwareDaoImpl;
 
 import java.util.List;
 

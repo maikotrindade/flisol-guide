@@ -3,7 +3,7 @@ package org.flisolsaocarlos.flisol.service;
 import android.content.Context;
 
 import org.flisolsaocarlos.flisol.model.Supporter;
-import org.flisolsaocarlos.flisol.provider.SupporterDaoImpl;
+import org.flisolsaocarlos.flisol.provider.impl.SupporterDaoImpl;
 
 import java.util.List;
 
