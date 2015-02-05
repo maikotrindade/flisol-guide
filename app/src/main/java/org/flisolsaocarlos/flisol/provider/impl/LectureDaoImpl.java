@@ -123,4 +123,22 @@ public class LectureDaoImpl implements LectureDao {
         return lecture;
     }
 
+    public List<String> findYears() {
+        List<String> years = new ArrayList<String>();
+
+        final String query = "SELECT DISTINCT e." + EditionColumns.YEAR + " FROM " + Tables.EDITION + " e"
+                + " JOIN " + Tables.LECTURE + " l"
+                + " ON e." + EditionColumns.ID + " = l." + LectureColumns.EDITION
+                + " ORDER BY " + EditionColumns.YEAR + " DESC";
+        final Cursor cursor = database.rawQuery(query, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            years.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return years;
+    }
+
 }

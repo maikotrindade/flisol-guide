@@ -25,4 +25,8 @@ public class LectureService {
     public List<Lecture> getByYear(int year) {
         return lectureDao.findByEditionYear(year);
     }
+
+    public List<String> getYears() {
+        return lectureDao.findYears();
+    }
 }
