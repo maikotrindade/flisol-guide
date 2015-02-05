@@ -1,7 +1,7 @@
 package org.flisolsaocarlos.flisol.service;
 
 import org.flisolsaocarlos.flisol.model.Course;
-import org.flisolsaocarlos.flisol.provider.CourseDaoImpl;
+import org.flisolsaocarlos.flisol.provider.impl.CourseDaoImpl;
 
 import java.util.List;
 

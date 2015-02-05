@@ -1,7 +1,7 @@
 package org.flisolsaocarlos.flisol.service;
 
 import org.flisolsaocarlos.flisol.model.Lecture;
-import org.flisolsaocarlos.flisol.provider.LectureDaoImpl;
+import org.flisolsaocarlos.flisol.provider.impl.LectureDaoImpl;
 
 import java.util.List;
 

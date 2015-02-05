@@ -2,7 +2,7 @@ package org.flisolsaocarlos.flisol.provider;
 
 public class DatabaseContract {
 
-    interface Tables{
+    public interface Tables{
         
         String EDITION = "edition";
         String LECTURE = "lecture";
@@ -13,12 +13,12 @@ public class DatabaseContract {
         String OPERATIONAL_SYSTEM = "operational_system";
     }
 
-    interface EditionColumns {
+    public interface EditionColumns {
         String ID = "_id";
         String YEAR = "year";
     }
 
-    interface LectureColumns {
+    public interface LectureColumns {
         String ID = "_id";
         String TITLE = "title";
         String DESCRIPTION = "description";
@@ -30,7 +30,7 @@ public class DatabaseContract {
         String EDITION = "edition_id";
     }
 
-    interface CourseColumns {
+    public interface CourseColumns {
         String ID = "_id";
         String TITLE = "title";
         String DESCRIPTION = "description";
@@ -42,8 +42,8 @@ public class DatabaseContract {
         String VACANCIES = "vacancies";
         String EDITION = "edition_id";
     }
-    
-    interface SupporterColumns {
+
+    public interface SupporterColumns {
         String ID = "_id";
         String NAME = "name";
         String WEBSITE = "website";
@@ -52,12 +52,12 @@ public class DatabaseContract {
         String EDITION = "edition_id";
     }
 
-    interface InstallFestColumns {
+    public interface InstallFestColumns {
         String ID = "_id";
         String EDITION = "edition_id";
     }
-    
-    interface SoftwareColumns {
+
+    public interface SoftwareColumns {
         String ID = "_id";
         String NAME = "name";
         String WEBSITE = "website";
