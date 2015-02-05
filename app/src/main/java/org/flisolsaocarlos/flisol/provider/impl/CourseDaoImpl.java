@@ -6,9 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 
 import org.flisolsaocarlos.flisol.model.Course;
 import org.flisolsaocarlos.flisol.provider.CourseDao;
+import org.flisolsaocarlos.flisol.provider.DatabaseContract.CourseColumns;
+import org.flisolsaocarlos.flisol.provider.DatabaseContract.EditionColumns;
+import org.flisolsaocarlos.flisol.provider.DatabaseContract.Tables;
 import org.flisolsaocarlos.flisol.provider.DatabaseHelper;
 import org.flisolsaocarlos.flisol.service.ApplicationService;
-import org.flisolsaocarlos.flisol.provider.DatabaseContract.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +35,7 @@ public class CourseDaoImpl implements CourseDao {
                 CourseColumns.SCHEDULE_END,
                 CourseColumns.ROOM,
                 CourseColumns.VACANCIES};
-        Cursor cursor = database.rawQuery("SELECT " + columns +" FROM " + Tables.COURSE
+        Cursor cursor = database.rawQuery("SELECT " + columns + " FROM " + Tables.COURSE
                 + " WHERE " + CourseColumns.ID + " = " + id, null);
 
         course = cursorToCourse(cursor);
@@ -125,4 +127,23 @@ public class CourseDaoImpl implements CourseDao {
 
         return course;
     }
+
+    public List<String> findYears() {
+        List<String> years = new ArrayList<String>();
+
+        final String query = "SELECT DISTINCT e." + EditionColumns.YEAR + " FROM " + Tables.EDITION + " e"
+                + " JOIN " + Tables.COURSE + " c"
+                + " ON e." + EditionColumns.ID + " = c." + CourseColumns.EDITION
+                + " ORDER BY " + EditionColumns.YEAR + " DESC";
+        final Cursor cursor = database.rawQuery(query, null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            years.add(cursor.getString(0));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return years;
+    }
+
 }

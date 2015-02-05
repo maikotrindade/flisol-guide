@@ -25,4 +25,8 @@ public class CourseService {
     public List<Course> getByYear(int year) {
         return courseDaoImpl.findByEditionYear(year);
     }
+
+    public List<String> getYears() {
+        return courseDaoImpl.findYears();
+    }
 }

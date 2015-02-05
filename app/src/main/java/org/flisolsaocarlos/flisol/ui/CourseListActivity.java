@@ -20,31 +20,31 @@ import java.util.List;
 
 public class CourseListActivity extends ListActivity {
 
-    private final String[] YEARS = new String[]{
-            "2014",
-            "2013",
-            "2012"
-    };
     private CourseAdapter courseAdapter;
     private CourseService courseService;
+    private List<String> years;
     private List<Course> courses;
-    //TODO update year
-    // this selects the current year, purposely not programmatically
-    private int selectedYear = 2014;
+    private int selectedYear;
 
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
         getActionBar().setIcon(R.drawable.ic_launcher_white);
         getListView().setDivider(null);
+        courseService = new CourseService();
+        loadActionBarData();
+        listCourses();
+    }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_list, YEARS);
-        getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+    private void loadActionBarData() {
+        years = courseService.getYears();
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_list, years);
         ActionBar.OnNavigationListener navigationListener = new ActionBar.OnNavigationListener() {
             @Override
             public boolean onNavigationItemSelected(int itemPosition, long itemId) {
-                String year = YEARS[itemPosition];
-                //in case of the user to select the same year, don't generate the courses again
+                String year = years.get(itemPosition);
+                //in case the user to select the same year, don't list the courses again
                 final int repeatedSelectedYear = Integer.parseInt(year);
                 if (repeatedSelectedYear != selectedYear) {
                     selectedYear = Integer.parseInt(year);
@@ -54,12 +54,9 @@ public class CourseListActivity extends ListActivity {
             }
         };
         getActionBar().setListNavigationCallbacks(adapter, navigationListener);
-
-        listCourses();
     }
 
     private void listCourses() {
-        courseService = new CourseService();
         final LayoutInflater layoutInfl = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         courseAdapter = new CourseAdapter(layoutInfl);
         courses = courseService.getByYear(selectedYear);
