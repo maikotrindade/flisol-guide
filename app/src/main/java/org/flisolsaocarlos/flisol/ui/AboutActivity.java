@@ -51,7 +51,7 @@ public class AboutActivity extends Activity implements View.OnClickListener {
                 overridePendingTransition(R.anim.start_in, R.anim.start_out);
                 break;
             case R.id.githubBtn:
-                final String githubUrl = getResources().getString(R.string.github_project_link);
+                final String githubUrl = getResources().getString(R.string.gitorious_project_link);
                 i.setData(Uri.parse(githubUrl));
                 startActivity(i);
                 break;

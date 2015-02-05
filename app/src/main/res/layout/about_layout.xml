@@ -167,7 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/appInfo"
                 android:layout_toRightOf="@id/aboutBtn"
-                android:text="@string/github" />
+                android:text="@string/gitorious" />
         </RelativeLayout>
 
     </LinearLayout>

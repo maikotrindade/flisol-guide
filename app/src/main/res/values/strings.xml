@@ -67,11 +67,11 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="map_marker_snippet" translatable="false">Av. Comendador Alfredo Maffei, 700</string>
     <string name="local_address" translatable="false">Sesc São Carlos - Av. Comendador Alfredo Maffei, 700</string>
     <string name="date" translatable="false">April XXth</string>
-    <string name="github_project_link" translatable="false">https://github.com/</string>
+    <string name="gitorious_project_link" translatable="false">https://gitorious.org/flisol-guide</string>
     <string name="title_activity_course">Course</string>
     <string name="title_activity_more_information">More Information</string>
     <string name="title_activity_license">License</string>
-    <string name="github" translatable="false">GitHub</string>
+    <string name="gitorious" translatable="false">Gitorious</string>
     <string name="license">License</string>
     <string name="title_activity_about_app">About the Application</string>
     <string name="title_activity_software_list">List of Softwares</string>
