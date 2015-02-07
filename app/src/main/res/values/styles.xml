@@ -81,6 +81,47 @@
         <item name="android:layout_weight">1.00</item>
     </style>
 
+    <style name="facebookButton">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">2sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:background">#496DA8</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.00</item>
+    </style>
+
+    <style name="twitterButton">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">2sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:background">#32DEF4</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.00</item>
+    </style>
+
+    <style name="googlePlusButton">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">2sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:background">#D64136</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.00</item>
+    </style>
+
+    <style name="softwareLivreButton">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">2sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:background">#99CD4E</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.00</item>
+    </style>
+
+
     <style name="DefaultButton">
         <item name="android:typeface">sans</item>
         <item name="android:padding">5sp</item>
