@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.4">
+        android:layout_weight="0.31">
 
         <ImageView
             android:id="@+id/imageView"
@@ -83,6 +83,37 @@
             style="@style/dashboardButton"
             android:layout_marginLeft="2sp"
             android:text="@string/supporters" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.09">
+
+        <ImageButton
+            android:id="@+id/facebookBtn"
+            style="@style/facebookButton"
+            android:src="@drawable/ic_facebook" />
+
+        <ImageButton
+            android:id="@+id/twitterBtn"
+            style="@style/twitterButton"
+            android:layout_marginLeft="1sp"
+            android:layout_marginRight="2sp"
+            android:src="@drawable/ic_twitter" />
+
+        <ImageButton
+            android:id="@+id/googlePlusBtn"
+            style="@style/googlePlusButton"
+            android:layout_marginLeft="2sp"
+            android:src="@drawable/ic_google_plus" />
+
+        <ImageButton
+            android:id="@+id/softwareLivreBtn"
+            style="@style/softwareLivreButton"
+            android:layout_marginLeft="1sp"
+            android:src="@drawable/ic_software_livre_brasil" />
+
     </LinearLayout>
 </LinearLayout>
 
