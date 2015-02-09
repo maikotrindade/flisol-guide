@@ -25,4 +25,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:6.+'
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.makeramen:roundedimageview:1.5.0'
 }

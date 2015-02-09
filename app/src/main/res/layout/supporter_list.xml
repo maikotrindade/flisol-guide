@@ -8,13 +8,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.trindade.flisol.ui.SupporterListActivity">
 
-    <ImageView
+    <com.makeramen.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/logoImage"
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/supporter" />
+        android:src="@drawable/supporter"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius="10dip"
+        app:riv_border_width="1dip"
+        app:riv_border_color="#666666"
+        app:riv_mutate_background="true"/>
 
     <TextView
         android:id="@+id/name"

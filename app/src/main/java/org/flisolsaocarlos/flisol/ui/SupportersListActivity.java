@@ -25,7 +25,7 @@ public class SupportersListActivity extends ListActivity {
     private SupporterService service;
     private SupporterAdapter adapter;
     private Supporter supporter;
-    //TODO updata supporter data and delete the dummy data from JSON
+    //TODO update supporter data and delete the dummy data from JSON
     // this selects the current year, purposely not programmatically
     private int currentYear = 2015;
 
