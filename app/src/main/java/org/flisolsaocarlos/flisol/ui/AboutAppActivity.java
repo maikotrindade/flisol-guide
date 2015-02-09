@@ -11,7 +11,6 @@ import org.flisolsaocarlos.flisol.R;
 public class AboutAppActivity extends Activity {
 
     private TextView versionNameTxt;
-    private TextView versionCodeTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

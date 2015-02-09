@@ -65,7 +65,7 @@
             android:label="@string/supporters" />
         <activity
             android:name=".ui.AboutActivity"
-            android:label="@string/about" />
+            android:label="@string/title_activity_about" />
         <activity
             android:name=".ui.WebActivity"
             android:label="" />

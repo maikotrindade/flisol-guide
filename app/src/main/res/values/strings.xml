@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">08 - Flisol</string>
-    <string name="current_event_year" translatable="false">2015</string>
+    <string name="current_event_year">2015</string>
 
     <string name="costs_label">Cost</string>
     <string name="official_website">Official Website</string>
@@ -37,15 +37,12 @@
     <string name="app_info">App Information</string>
     <string name="by">by</string>
     <string name="submit">Submit</string>
-    <string name="flisolappAbout">Android Application under the GNU GENERAL PUBLIC LICENSE v3 that provides information about the FLISOL São Carlos. The application presents information about lectures and courses since the year 2012, in addition displaying the location, support and schedule of the impending issue. Please contact the developers through the form below to criticism, partnerships or suggestions.</string>
-    <string name="freedomKnowlogdeQuote">\"Knowledge is the only fountain, both of the love and
-        the principles of human liberty\" by Daniel Webster</string>
+    <string name="flisolappAbout">Android Application under the GPL v3 that provides information about the FLISOL São Carlos. The application presents information about lectures and courses since the year 2012, in addition displaying the location, support and schedule of the impending issue. Please contact the developers through the form below to criticism, partnerships or suggestions.</string>
+    <string name="freedomKnowlogdeQuote">\"Knowledge is the only fountain, both of the love and the principles of human liberty\" by Daniel Webster</string>
     <string name="installFestText">The main FLISOL\'s goal is to promote the Free Software usage providing information about his philosophy, scope, progress and development to general public.
 Therefore, in addition to lectures and courses, simultaneously the Install Fest occurs: Community people can bring their computers to the FLISOL team can install free software, especially Linux distributions for free.
 In addition, the Install Fest is for the exchange of information and experiences among the participants of the event, especially for beginners of free software.
 </string>
-
-
 
 
     <!-- Dialogs and Messages to users -->
@@ -67,11 +64,11 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="gitorious_project_link" translatable="false">https://gitorious.org/flisol-guide</string>
 
     <!-- TODO - REVISAR -->
-    <string name="coming_soon">Coming soon</string>
+    <string name="coming_soon">More information coming soon</string>
     <string name="map_marker_title" translatable="false">Flisol São Carlos (Sesc São Carlos)</string>
     <string name="map_marker_snippet" translatable="false">Av. Comendador Alfredo Maffei, 700</string>
     <string name="local_address" translatable="false">Sesc São Carlos - Av. Comendador Alfredo Maffei, 700</string>
-    <string name="date" translatable="false">April XXth</string>
+    <string name="date">April 25th</string>
 
     <string name="title_activity_course">Course</string>
     <string name="title_activity_more_information">More Information</string>
@@ -89,7 +86,5 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="title_activity_supporters">Supporters</string>
 
     <!-- KEYS -->
-    <string name="google_maps_api_key">  INSERT YOUR API KEY HERE  </string>
-
-
+    <string name="google_maps_api_key" translatable="false">  INSERT YOUR API KEY HERE  </string>
 </resources>
