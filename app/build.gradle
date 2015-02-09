@@ -26,4 +26,8 @@ dependencies {
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.makeramen:roundedimageview:1.5.0'
+    compile('de.keyboardsurfer.android.widget:crouton:1.8.5@aar') {
+        // exclusion is not necessary, but generally a good idea.
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
 }
