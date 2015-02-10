@@ -97,6 +97,42 @@
                 android:text="@string/costs" />
         </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_block_text"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/official_website_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:layout_alignParentTop="true"
+                android:text="@string/official_website"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/localWebsiteBtn"
+                style="@style/DefaultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/official_website_label"
+                android:text="@string/flisol" />
+
+            <Button
+                android:id="@+id/interWebsiteBtn"
+                style="@style/DefaultButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/localWebsiteBtn"
+                android:layout_below="@id/official_website_label"
+                android:text="@string/international_flisol" />
+
+        </RelativeLayout>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,14 +155,37 @@
                 android:paddingBottom="6dp"
                 android:text="@string/collaborate_text" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_block_text"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="@string/contact"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:text="@string/contact_flisol" />
+
             <Button
-                android:id="@+id/websiteBtn"
+                android:id="@+id/contactBtn"
                 style="@style/DefaultButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/official_website" />
-        </LinearLayout>
+                android:text="@string/contact" />
 
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

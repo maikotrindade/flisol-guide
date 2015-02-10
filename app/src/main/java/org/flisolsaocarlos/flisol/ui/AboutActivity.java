@@ -12,6 +12,8 @@ import org.flisolsaocarlos.flisol.R;
 
 public class AboutActivity extends Activity implements View.OnClickListener {
 
+        private Button contactBtn, licenseBtn, aboutBtn, gitoriousBtn,
+                websiteBtn, interWebsiteBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,17 +22,23 @@ public class AboutActivity extends Activity implements View.OnClickListener {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setIcon(R.drawable.ic_launcher_white);
 
-        Button licenseButton = (Button) findViewById(R.id.licenseBtn);
-        licenseButton.setOnClickListener(this);
+        licenseBtn = (Button) findViewById(R.id.licenseBtn);
+        licenseBtn.setOnClickListener(this);
 
-        Button aboutButton = (Button) findViewById(R.id.aboutBtn);
-        aboutButton.setOnClickListener(this);
+        aboutBtn = (Button) findViewById(R.id.aboutBtn);
+        aboutBtn.setOnClickListener(this);
 
-        Button gitoriousButton = (Button) findViewById(R.id.gitoriousBtn);
-        gitoriousButton.setOnClickListener(this);
+        gitoriousBtn = (Button) findViewById(R.id.gitoriousBtn);
+        gitoriousBtn.setOnClickListener(this);
 
-        Button websiteButton = (Button) findViewById(R.id.websiteBtn);
-        websiteButton.setOnClickListener(this);
+        websiteBtn = (Button) findViewById(R.id.localWebsiteBtn);
+        websiteBtn.setOnClickListener(this);
+
+        contactBtn = (Button) findViewById(R.id.contactBtn);
+        contactBtn.setOnClickListener(this);
+
+        interWebsiteBtn = (Button) findViewById(R.id.interWebsiteBtn);
+        interWebsiteBtn.setOnClickListener(this);
     }
 
     @Override
@@ -55,9 +63,19 @@ public class AboutActivity extends Activity implements View.OnClickListener {
                 i.setData(Uri.parse(gitoriousUrl));
                 startActivity(i);
                 break;
-            case R.id.websiteBtn:
-                final String websiteUrl = getResources().getString(R.string.official_website_link);
+            case R.id.localWebsiteBtn:
+                final String websiteUrl = getResources().getString(R.string.local_website_link);
                 i.setData(Uri.parse(websiteUrl));
+                startActivity(i);
+                break;
+            case R.id.interWebsiteBtn:
+                final String interWebsiteUrl = getResources().getString(R.string.international_website_link);
+                i.setData(Uri.parse(interWebsiteUrl));
+                startActivity(i);
+                break;
+            case R.id.contactBtn:
+                final String contactUrl = getResources().getString(R.string.contact_flisol_url);
+                i.setData(Uri.parse(contactUrl));
                 startActivity(i);
                 break;
         }

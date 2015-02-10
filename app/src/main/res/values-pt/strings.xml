@@ -63,5 +63,8 @@ Além disso, o Install Fest é destinado a troca de informações e experiência
     <string name="your_name">Seu nome</string>
     <string name="coming_soon">Em breve mais informações</string>
     <string name="google_maps_api_key" translatable="false"></string>
+    <string name="contact_flisol">Entre em contato com a comissão organizadora do FLISOL para dúvidas, sugestões, críticas ou parcerias</string>
+    <string name="contact">Contato</string>
+    <string name="international_flisol">FLISOL Internacional</string>
 
 </resources>
