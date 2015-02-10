@@ -5,15 +5,19 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import org.flisolsaocarlos.flisol.model.Address;
 import org.flisolsaocarlos.flisol.model.Course;
 import org.flisolsaocarlos.flisol.model.DatabaseContainer;
 import org.flisolsaocarlos.flisol.model.Edition;
+import org.flisolsaocarlos.flisol.model.HostingPlace;
 import org.flisolsaocarlos.flisol.model.InstallFest;
 import org.flisolsaocarlos.flisol.model.Lecture;
 import org.flisolsaocarlos.flisol.model.Software;
 import org.flisolsaocarlos.flisol.model.Supporter;
+import org.flisolsaocarlos.flisol.provider.DatabaseContract.AddressColumns;
 import org.flisolsaocarlos.flisol.provider.DatabaseContract.CourseColumns;
 import org.flisolsaocarlos.flisol.provider.DatabaseContract.EditionColumns;
+import org.flisolsaocarlos.flisol.provider.DatabaseContract.HostingPlaceColumns;
 import org.flisolsaocarlos.flisol.provider.DatabaseContract.InstallFestColumns;
 import org.flisolsaocarlos.flisol.provider.DatabaseContract.LectureColumns;
 import org.flisolsaocarlos.flisol.provider.DatabaseContract.SoftwareColumns;
@@ -69,6 +73,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + SupporterColumns.WEBSITE + " INTEGER NOT NULL, "
             + SupporterColumns.EDITION + " INTEGER REFERENCES " + Tables.EDITION + "( " + EditionColumns.ID + " ) ON UPDATE CASCADE)";
 
+    private static final String HOSTING_PLACE_CREATE = "CREATE TABLE " +
+            Tables.HOSTING_PLACE
+            + "(" + HostingPlaceColumns.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + HostingPlaceColumns.NAME + " TEXT NOT NULL, "
+            + HostingPlaceColumns.LATITUDE + " REAL NOT NULL, "
+            + HostingPlaceColumns.LONGITUDE + " REAL NOT NULL, "
+            + HostingPlaceColumns.EDITION + " INTEGER REFERENCES " + Tables.EDITION + "( " + EditionColumns.ID + " ) ON UPDATE CASCADE)";
+
+    private static final String ADDRESS_CREATE = "CREATE TABLE " +
+            Tables.ADDRESS
+            + "(" + AddressColumns.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + AddressColumns.STREET + " TEXT NOT NULL, "
+            + AddressColumns.NUMBER + " INTEGER NOT NULL, "
+            + AddressColumns.DISTRICT + " TEXT NOT NULL, "
+            + AddressColumns.CITY + " TEXT NOT NULL, "
+            + AddressColumns.STATE + " TEXT NOT NULL, "
+            + AddressColumns.HOSTING_PLACE + " INTEGER REFERENCES " + Tables.HOSTING_PLACE + "( " + HostingPlaceColumns.ID + " ) ON UPDATE CASCADE)";
+
+
     private static final String INSTALL_FEST_CREATE = "CREATE TABLE " +
             Tables.INSTALL_FEST
             + "(" + InstallFestColumns.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -95,6 +118,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         database.execSQL(LECTURE_CREATE);
         database.execSQL(COURSE_CREATE);
         database.execSQL(SUPPORTER_CREATE);
+        database.execSQL(HOSTING_PLACE_CREATE);
+        database.execSQL(ADDRESS_CREATE);
 
         database.execSQL(INSTALL_FEST_CREATE);
         database.execSQL(SOFTWARE_CREATE);
@@ -115,6 +140,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         database.execSQL("DROP TABLE IF EXISTS " + Tables.LECTURE);
         database.execSQL("DROP TABLE IF EXISTS " + Tables.COURSE);
         database.execSQL("DROP TABLE IF EXISTS " + Tables.SUPPORTER);
+        database.execSQL("DROP TABLE IF EXISTS " + Tables.HOSTING_PLACE);
+        database.execSQL("DROP TABLE IF EXISTS " + Tables.ADDRESS);
+
         database.execSQL("DROP TABLE IF EXISTS " + Tables.INSTALL_FEST);
         database.execSQL("DROP TABLE IF EXISTS " + Tables.SOFTWARE);
         onCreate(database);
@@ -199,6 +227,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                     database.insert(Tables.SUPPORTER, null, values);
                     values.clear();
+                }
+            }
+
+            final HostingPlace hostingPlace = edition.getHostingPlace();
+            if (hostingPlace != null) {
+
+                ContentValues hpValues = new ContentValues();
+                hpValues.put(HostingPlaceColumns.NAME, hostingPlace.getName());
+                hpValues.put(HostingPlaceColumns.LATITUDE, hostingPlace.getLatitude());
+                hpValues.put(HostingPlaceColumns.LONGITUDE, hostingPlace.getLongitude());
+                hpValues.put(HostingPlaceColumns.EDITION, insertedEditionId);
+                final long insertedHostingPlaceId = database.insert(Tables.HOSTING_PLACE, null, hpValues);
+                hpValues.clear();
+
+                final Address address = hostingPlace.getAddress();
+                if (address != null) {
+                    ContentValues addressValues = new ContentValues();
+                    addressValues.put(AddressColumns.STREET, address.getStreet());
+                    addressValues.put(AddressColumns.NUMBER, address.getNumber());
+                    addressValues.put(AddressColumns.DISTRICT, address.getDistrict());
+                    addressValues.put(AddressColumns.CITY, address.getCity());
+                    addressValues.put(AddressColumns.STATE, address.getState());
+                    addressValues.put(AddressColumns.HOSTING_PLACE, insertedHostingPlaceId);
+                    database.insert(Tables.ADDRESS, null, addressValues);
+                    addressValues.clear();
                 }
             }
 

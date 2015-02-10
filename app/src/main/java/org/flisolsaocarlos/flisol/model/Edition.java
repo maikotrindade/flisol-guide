@@ -9,6 +9,7 @@ public class Edition {
     private List<Lecture> lectures;
     private List<Supporter> supporters;
     private InstallFest installFest;
+    private HostingPlace hostingPlace;
     private int year;
 
     public int getId() {
@@ -57,6 +58,14 @@ public class Edition {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public HostingPlace getHostingPlace() {
+        return hostingPlace;
+    }
+
+    public void setHostingPlace(HostingPlace hostingPlace) {
+        this.hostingPlace = hostingPlace;
     }
 
     @Override

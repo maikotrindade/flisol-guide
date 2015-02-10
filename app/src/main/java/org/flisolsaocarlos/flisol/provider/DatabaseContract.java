@@ -2,15 +2,16 @@ package org.flisolsaocarlos.flisol.provider;
 
 public class DatabaseContract {
 
-    public interface Tables{
-        
+    public interface Tables {
+
         String EDITION = "edition";
         String LECTURE = "lecture";
         String COURSE = "course";
         String SUPPORTER = "supporter";
         String INSTALL_FEST = "install_fest";
         String SOFTWARE = "software";
-        String OPERATIONAL_SYSTEM = "operational_system";
+        String HOSTING_PLACE = "hosting_place";
+        String ADDRESS = "address";
     }
 
     public interface EditionColumns {
@@ -65,5 +66,23 @@ public class DatabaseContract {
         String CATEGORY = "category";
         String VERSION = "version";
         String INSTALL_FEST = "install_fest_id";
+    }
+
+    public interface HostingPlaceColumns {
+        String ID = "_id";
+        String NAME = "name";
+        String LATITUDE = "latitude";
+        String LONGITUDE = "longitude";
+        String EDITION = "edition_id";
+    }
+
+    public interface AddressColumns {
+        String ID = "_id";
+        String STREET = "street";
+        String NUMBER = "number";
+        String DISTRICT = "district";
+        String CITY = "city";
+        String STATE = "state";
+        String HOSTING_PLACE = "hosting_place_id";
     }
 }
