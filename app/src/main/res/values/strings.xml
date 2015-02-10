@@ -3,6 +3,7 @@
 
     <string name="app_name">08 - Flisol</string>
     <string name="current_event_year">2015</string>
+    <string name="coming_soon">More information coming soon</string>
 
     <string name="costs_label">Cost</string>
     <string name="official_website">Official Website</string>
@@ -73,13 +74,12 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="software_livre_url" translatable="false">http://softwarelivre.org/flisolsaocarlos</string>
     <string name="facebook_url" translatable="false">https://www.facebook.com/flisolsaocarlos</string>
     <string name="gitorious_project_link" translatable="false">https://gitorious.org/flisol-guide</string>
+    <string name="map_marker_title" translatable="false">Flisol São Carlos (Senac São Carlos)</string>
+    <string name="map_marker_snippet" translatable="false">Rua Episcopal, 700</string>
+    <string name="local_address" translatable="false">Senac São Carlos - Rua Episcopal, 700</string>
+    <string name="date">April 25th</string>
 
     <!-- TODO - REVISAR -->
-    <string name="coming_soon">More information coming soon</string>
-    <string name="map_marker_title" translatable="false">Flisol São Carlos (Sesc São Carlos)</string>
-    <string name="map_marker_snippet" translatable="false">Av. Comendador Alfredo Maffei, 700</string>
-    <string name="local_address" translatable="false">Sesc São Carlos - Av. Comendador Alfredo Maffei, 700</string>
-    <string name="date">April 25th</string>
     <string name="developer_email" translatable="false">maikocharles@gmail.com</string>
 
     <string name="title_activity_course">Course</string>
@@ -98,6 +98,6 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="title_activity_supporters">Supporters</string>
 
     <!-- KEYS -->
-    <string name="google_maps_api_key" translatable="false">  INSERT YOUR API KEY HERE  </string>
+    <string name="google_maps_api_key" translatable="false"> INSERT YOUR CODE HERE </string>
 
 </resources>

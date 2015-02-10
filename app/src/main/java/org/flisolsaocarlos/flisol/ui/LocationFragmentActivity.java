@@ -16,7 +16,7 @@ import org.flisolsaocarlos.flisol.R;
 
 public class LocationFragmentActivity extends FragmentActivity {
 
-    static final LatLng FLISOLSAOCARLOS = new LatLng(-22.016932, -47.906372);
+    static final LatLng FLISOLSAOCARLOS = new LatLng(-22.024825, 47.891287);
     private GoogleMap mMap;
 
     @Override
