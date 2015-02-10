@@ -56,7 +56,13 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="subject">Subject</string>
     <string name="your_name">Your name</string>
     <string name="message">Message</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="invalid_name">Invalid Name</string>
+    <string name="invalid_subject">Invalid Subject</string>
+    <string name="invalid_message">Invalid Message</string>
     <string name="your_email">Your e-mail</string>
+    <string name="send_email">Send e-mail...</string>
+    <string name="send_email_error">There are no email clients installed.</string>
 
     <!-- LINKS -->
     <string name="license_link" translatable="false">http://www.gnu.org/licenses/gpl.html</string>
@@ -74,6 +80,7 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="map_marker_snippet" translatable="false">Av. Comendador Alfredo Maffei, 700</string>
     <string name="local_address" translatable="false">Sesc São Carlos - Av. Comendador Alfredo Maffei, 700</string>
     <string name="date">April 25th</string>
+    <string name="developer_email" translatable="false">maikocharles@gmail.com</string>
 
     <string name="title_activity_course">Course</string>
     <string name="title_activity_more_information">More Information</string>
