@@ -203,20 +203,11 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/licenseBtn"
-                style="@style/DefaultButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/appInfo"
-                android:text="@string/license" />
-
-            <Button
                 android:id="@+id/aboutBtn"
                 style="@style/DefaultButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/appInfo"
-                android:layout_toRightOf="@id/licenseBtn"
                 android:text="@string/about" />
 
             <Button

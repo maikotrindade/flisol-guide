@@ -12,7 +12,7 @@ import org.flisolsaocarlos.flisol.R;
 
 public class AboutActivity extends Activity implements View.OnClickListener {
 
-        private Button contactBtn, licenseBtn, aboutBtn, gitoriousBtn,
+        private Button contactBtn, aboutBtn, gitoriousBtn,
                 websiteBtn, interWebsiteBtn;
 
     @Override
@@ -21,9 +21,6 @@ public class AboutActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.about_layout);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setIcon(R.drawable.ic_launcher_white);
-
-        licenseBtn = (Button) findViewById(R.id.licenseBtn);
-        licenseBtn.setOnClickListener(this);
 
         aboutBtn = (Button) findViewById(R.id.aboutBtn);
         aboutBtn.setOnClickListener(this);

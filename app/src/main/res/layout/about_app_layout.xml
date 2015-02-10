@@ -12,11 +12,19 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin">
 
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_centerHorizontal="true" />
+
         <TextView
             android:id="@+id/appName"
             style="@style/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
             android:layout_centerHorizontal="true"
             android:text="@string/app_name" />
 
@@ -34,17 +42,27 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/versionName"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/flisolappAbout" />
+
+        <Button
+            android:id="@+id/licenseBtn"
+            style="@style/DefaultButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/flisolappAbout"
+            android:text="@string/license" />
 
         <TextView
             android:id="@+id/freedomKnowlogdeQuote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/flisolappAbout"
+            android:layout_below="@id/licenseBtn"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            android:text="@string/freedomKnowlogdeQuote"
+            android:text="@string/freedomQuote"
             android:textSize="11sp"
             android:textStyle="italic" />
 
@@ -53,6 +71,8 @@
             android:layout_height="match_parent"
             android:layout_below="@id/freedomKnowlogdeQuote"
             android:background="@drawable/custom_block_text"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:orientation="vertical">
 
             <TextView
@@ -69,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/your_name" />
+                android:hint="@string/your_name"/>
 
             <EditText
                 android:id="@+id/emailEdit"
@@ -79,7 +99,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/your_email"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"/>
 
             <EditText
                 android:id="@+id/subjectEdit"
@@ -87,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/subject" />
+                android:hint="@string/subject"/>
 
             <EditText
                 android:id="@+id/messageEdit"
@@ -97,7 +117,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/message"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"/>
 
             <Button
                 android:id="@+id/submitBtn"
