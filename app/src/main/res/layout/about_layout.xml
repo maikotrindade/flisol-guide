@@ -68,13 +68,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
-                android:text="@string/local"
+                android:text="@string/hosting_place"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/local_address" />
+                android:text="@string/hosting_place_address" />
         </LinearLayout>
 
         <LinearLayout

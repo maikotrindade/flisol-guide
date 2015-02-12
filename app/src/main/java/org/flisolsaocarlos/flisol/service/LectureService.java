@@ -1,5 +1,7 @@
 package org.flisolsaocarlos.flisol.service;
 
+import org.flisolsaocarlos.flisol.model.Edition;
+import org.flisolsaocarlos.flisol.model.HostingPlace;
 import org.flisolsaocarlos.flisol.model.Lecture;
 import org.flisolsaocarlos.flisol.provider.impl.LectureDaoImpl;
 
@@ -20,6 +22,16 @@ public class LectureService {
 
     public List<Lecture> getLectures() {
         return lectureDao.findAll();
+    }
+
+    public Edition getEditionByYear(int year) {
+        EditionService editionService = new EditionService();
+        return editionService.getByYear(year);
+    }
+
+    public HostingPlace getHostingPlaceByEdition(Edition edition) {
+        EditionService editionService = new EditionService();
+        return editionService.getHostingPlaceByEdition(edition);
     }
 
     public List<Lecture> getByYear(int year) {

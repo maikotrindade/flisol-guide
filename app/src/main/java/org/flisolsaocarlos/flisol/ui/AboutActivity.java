@@ -61,7 +61,7 @@ public class AboutActivity extends Activity implements View.OnClickListener {
                 startActivity(i);
                 break;
             case R.id.localWebsiteBtn:
-                final String websiteUrl = getResources().getString(R.string.local_website_link);
+                final String websiteUrl = getResources().getString(R.string.hosting_place_website_link);
                 i.setData(Uri.parse(websiteUrl));
                 startActivity(i);
                 break;

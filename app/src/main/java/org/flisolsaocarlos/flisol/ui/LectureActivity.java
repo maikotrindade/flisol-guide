@@ -15,6 +15,9 @@ public class LectureActivity extends Activity {
 
     private ShareActionProvider mShareActionProvider;
     private Lecture lecture;
+    private TextView lectureTitleTxt, lectureDescriptionTxt, lectureLecturerTxt, lectureFieldTxt,
+            lectureScheduleBeginTxt, lectureScheduleEndTxt, hostingPlaceTxt, lectureRoomTxt;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,27 +28,31 @@ public class LectureActivity extends Activity {
 
         final Bundle bundle = getIntent().getExtras();
         lecture = bundle.getParcelable("lecture");
+        final String hostingPlace = bundle.getString("hostingPlace");
 
-        TextView lectureTitle = (TextView) findViewById(R.id.title);
-        lectureTitle.setText(lecture.getTitle());
+        lectureTitleTxt = (TextView) findViewById(R.id.title);
+        lectureTitleTxt.setText(lecture.getTitle());
 
-        TextView lectureDescription = (TextView) findViewById(R.id.description);
-        lectureDescription.setText(lecture.getDescription());
+        lectureDescriptionTxt = (TextView) findViewById(R.id.description);
+        lectureDescriptionTxt.setText(lecture.getDescription());
 
-        TextView lectureLecturer = (TextView) findViewById(R.id.lecturer);
-        lectureLecturer.setText(lecture.getLecturer());
+        lectureLecturerTxt = (TextView) findViewById(R.id.lecturer);
+        lectureLecturerTxt.setText(lecture.getLecturer());
 
-        TextView lectureField = (TextView) findViewById(R.id.field);
-        lectureField.setText(lecture.getField());
+        lectureFieldTxt = (TextView) findViewById(R.id.field);
+        lectureFieldTxt.setText(lecture.getField());
 
-        TextView lectureScheduleBegin = (TextView) findViewById(R.id.schedule_begin);
-        lectureScheduleBegin.setText(lecture.getScheduleBegin());
+        lectureScheduleBeginTxt = (TextView) findViewById(R.id.schedule_begin);
+        lectureScheduleBeginTxt.setText(lecture.getScheduleBegin());
 
-        TextView lectureScheduleEnd = (TextView) findViewById(R.id.schedule_end);
-        lectureScheduleEnd.setText(lecture.getScheduleEnd());
+        lectureScheduleEndTxt = (TextView) findViewById(R.id.schedule_end);
+        lectureScheduleEndTxt.setText(lecture.getScheduleEnd());
 
-        TextView lectureRoom = (TextView) findViewById(R.id.room);
-        lectureRoom.setText(lecture.getRoom());
+        hostingPlaceTxt = (TextView) findViewById(R.id.hosting_place);
+        hostingPlaceTxt.setText(hostingPlace);
+
+        lectureRoomTxt = (TextView) findViewById(R.id.room);
+        lectureRoomTxt.setText(lecture.getRoom());
 
     }
 

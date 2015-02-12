@@ -14,6 +14,8 @@ import android.widget.ListView;
 import org.flisolsaocarlos.flisol.R;
 import org.flisolsaocarlos.flisol.adapter.CourseAdapter;
 import org.flisolsaocarlos.flisol.model.Course;
+import org.flisolsaocarlos.flisol.model.Edition;
+import org.flisolsaocarlos.flisol.model.HostingPlace;
 import org.flisolsaocarlos.flisol.service.CourseService;
 
 import java.util.List;
@@ -24,6 +26,7 @@ public class CourseListActivity extends ListActivity {
     private CourseService courseService;
     private List<String> years;
     private List<Course> courses;
+    private Edition edition;
     private int selectedYear;
 
     public void onCreate(Bundle icicle) {
@@ -48,6 +51,7 @@ public class CourseListActivity extends ListActivity {
                 final int repeatedSelectedYear = Integer.parseInt(year);
                 if (repeatedSelectedYear != selectedYear) {
                     selectedYear = Integer.parseInt(year);
+                    edition = courseService.getEditionByYear(selectedYear);
                     listCourses();
                 }
                 return false;
@@ -74,6 +78,11 @@ public class CourseListActivity extends ListActivity {
         intent.setClass(getApplicationContext(), CourseActivity.class);
         Course course = courseAdapter.getItem(position);
         intent.putExtra("course", course);
+
+        final HostingPlace hostingPlace = courseService.getHostingPlaceByEdition(edition);
+        final String hostingPlaceName = hostingPlace.getName();
+        intent.putExtra("hostingPlace", hostingPlaceName);
+
         startActivity(intent);
         overridePendingTransition(R.anim.start_in, R.anim.start_out);
     }

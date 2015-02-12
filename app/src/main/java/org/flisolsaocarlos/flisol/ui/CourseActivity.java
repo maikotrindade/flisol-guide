@@ -15,6 +15,8 @@ public class CourseActivity extends Activity {
 
     private ShareActionProvider mShareActionProvider;
     private Course course;
+    private TextView courseTitleTxt, courseDescriptionTxt, courseCourserTxt, courseFieldTxt,
+            courseScheduleBeginTxt, courseScheduleEndTxt, hostingPlaceTxt, courseRoomTxt, courseVacanciesTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,30 +27,34 @@ public class CourseActivity extends Activity {
 
         final Bundle bundle = getIntent().getExtras();
         course = bundle.getParcelable("course");
+        final String hostingPlace = bundle.getString("hostingPlace");
 
-        TextView courseTitle = (TextView) findViewById(R.id.title);
-        courseTitle.setText(course.getTitle());
+        courseTitleTxt = (TextView) findViewById(R.id.title);
+        courseTitleTxt.setText(course.getTitle());
 
-        TextView courseDescription = (TextView) findViewById(R.id.description);
-        courseDescription.setText(course.getDescription());
+        courseDescriptionTxt = (TextView) findViewById(R.id.description);
+        courseDescriptionTxt.setText(course.getDescription());
 
-        TextView courseCourser = (TextView) findViewById(R.id.lecturer);
-        courseCourser.setText(course.getLecturer());
+        courseCourserTxt = (TextView) findViewById(R.id.lecturer);
+        courseCourserTxt.setText(course.getLecturer());
 
-        TextView courseField = (TextView) findViewById(R.id.field);
-        courseField.setText(course.getField());
+        courseFieldTxt = (TextView) findViewById(R.id.field);
+        courseFieldTxt.setText(course.getField());
 
-        TextView courseScheduleBegin = (TextView) findViewById(R.id.schedule_begin);
-        courseScheduleBegin.setText(course.getScheduleBegin());
+        courseScheduleBeginTxt = (TextView) findViewById(R.id.schedule_begin);
+        courseScheduleBeginTxt.setText(course.getScheduleBegin());
 
-        TextView courseScheduleEnd = (TextView) findViewById(R.id.schedule_end);
-        courseScheduleEnd.setText(course.getScheduleEnd());
+        courseScheduleEndTxt = (TextView) findViewById(R.id.schedule_end);
+        courseScheduleEndTxt.setText(course.getScheduleEnd());
 
-        TextView courseRoom = (TextView) findViewById(R.id.room);
-        courseRoom.setText(course.getRoom());
+        hostingPlaceTxt = (TextView) findViewById(R.id.hosting_place);
+        hostingPlaceTxt.setText(hostingPlace);
 
-        TextView courseVacancies = (TextView) findViewById(R.id.vacancies);
-        courseVacancies.setText(course.getVacancies().toString());
+        courseRoomTxt = (TextView) findViewById(R.id.room);
+        courseRoomTxt.setText(course.getRoom());
+
+        courseVacanciesTxt = (TextView) findViewById(R.id.vacancies);
+        courseVacanciesTxt.setText(course.getVacancies().toString());
 
     }
 

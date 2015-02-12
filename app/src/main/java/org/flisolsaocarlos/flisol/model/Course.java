@@ -108,6 +108,14 @@ public class Course implements Parcelable {
         this.vacancies = vacancies;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public int describeContents() {
         return 0;

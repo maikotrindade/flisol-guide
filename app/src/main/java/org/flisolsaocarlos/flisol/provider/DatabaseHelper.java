@@ -85,7 +85,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Tables.ADDRESS
             + "(" + AddressColumns.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + AddressColumns.STREET + " TEXT NOT NULL, "
-            + AddressColumns.NUMBER + " INTEGER NOT NULL, "
+            + AddressColumns.NUMBER + " INTEGER, "
             + AddressColumns.DISTRICT + " TEXT NOT NULL, "
             + AddressColumns.CITY + " TEXT NOT NULL, "
             + AddressColumns.STATE + " TEXT NOT NULL, "

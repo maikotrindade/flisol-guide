@@ -19,6 +19,7 @@ package org.flisolsaocarlos.flisol.model;
 
 public class HostingPlace {
 
+    private int id;
     private String name;
     private Double latitude;
     private Double longitude;
@@ -50,6 +51,14 @@ public class HostingPlace {
 
     public Address getAddress() {
         return address;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setAddress(Address address) {

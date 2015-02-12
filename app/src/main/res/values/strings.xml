@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">08 - Flisol</string>
+    <string name="app_name">Flisol</string>
     <string name="current_event_year">2015</string>
     <string name="coming_soon">More information coming soon</string>
 
@@ -29,7 +29,7 @@
     <string name="lecture">Lecture</string>
     <string name="home">Home</string>
     <string name="room">Room</string>
-    <string name="local">Local</string>
+    <string name="hosting_place">Place</string>
     <string name="interval" translatable="false">-</string>
     <string name="lecturer">Lecturer</string>
     <string name="share">Share</string>
@@ -67,7 +67,7 @@ In addition, the Install Fest is for the exchange of information and experiences
 
     <!-- LINKS -->
     <string name="license_link" translatable="false">http://www.gnu.org/licenses/gpl.html</string>
-    <string name="local_website_link" translatable="false">http://flisolsaocarlos.net.br</string>
+    <string name="hosting_place_website_link" translatable="false">http://flisolsaocarlos.net.br</string>
     <string name="international_website_link" translatable="false">http://www.flisol.info/</string>
     <string name="twitter_url" translatable="false">https://twitter.com/flisolsaocarlos</string>
     <string name="google_plus_url" translatable="false">https://plus.google.com/u/0/105178954936186224490</string>
@@ -76,7 +76,7 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="gitorious_project_link" translatable="false">https://gitorious.org/flisol-guide</string>
     <string name="map_marker_title" translatable="false">Flisol São Carlos (Senac São Carlos)</string>
     <string name="map_marker_snippet" translatable="false">Rua Episcopal, 700</string>
-    <string name="local_address" translatable="false">Senac São Carlos - Rua Episcopal, 700</string>
+    <string name="hosting_place_address" translatable="false">Senac São Carlos - Rua Episcopal, 700</string>
     <string name="date">April 25th</string>
 
     <!-- TODO - REVISAR -->

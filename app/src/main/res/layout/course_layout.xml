@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/custom_block_text">
 
             <TextView
@@ -95,11 +95,30 @@
                 android:layout_toRightOf="@id/interval_label" />
 
             <TextView
-                android:id="@+id/room_label"
+                android:id="@+id/hosting_place_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@id/schedule_end"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:text="@string/hosting_place"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hosting_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/hosting_place_label" />
+
+            <TextView
+                android:id="@+id/room_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/hosting_place"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="4dp"
                 android:text="@string/room"

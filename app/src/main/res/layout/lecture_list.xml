@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/lecturer_label"
         android:layout_marginLeft="10dp"
-        android:text="@string/local"
+        android:text="@string/hosting_place"
         android:textSize="15sp" />
 
     <TextView

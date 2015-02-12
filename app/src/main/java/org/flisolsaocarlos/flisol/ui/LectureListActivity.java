@@ -13,6 +13,8 @@ import android.widget.ListView;
 
 import org.flisolsaocarlos.flisol.R;
 import org.flisolsaocarlos.flisol.adapter.LectureAdapter;
+import org.flisolsaocarlos.flisol.model.Edition;
+import org.flisolsaocarlos.flisol.model.HostingPlace;
 import org.flisolsaocarlos.flisol.model.Lecture;
 import org.flisolsaocarlos.flisol.service.LectureService;
 
@@ -20,10 +22,11 @@ import java.util.List;
 
 public class LectureListActivity extends ListActivity {
 
-    private LectureAdapter lectureAdapter;
+    private LectureAdapter adapter;
     private LectureService lectureService;
     private List<String> years;
     private List<Lecture> lectures;
+    private Edition edition;
     private int selectedYear;
 
     public void onCreate(Bundle icicle) {
@@ -32,6 +35,7 @@ public class LectureListActivity extends ListActivity {
         getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
         getActionBar().setIcon(R.drawable.ic_launcher_white);
         getListView().setDivider(null);
+
         lectureService = new LectureService();
         loadActionBarData();
         listLectures();
@@ -48,6 +52,7 @@ public class LectureListActivity extends ListActivity {
                 final int repeatedSelectedYear = Integer.parseInt(year);
                 if (repeatedSelectedYear != selectedYear) {
                     selectedYear = Integer.parseInt(year);
+                    edition = lectureService.getEditionByYear(selectedYear);
                     listLectures();
                 }
                 return false;
@@ -58,13 +63,13 @@ public class LectureListActivity extends ListActivity {
 
     private void listLectures() {
         final LayoutInflater layoutInfl = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        lectureAdapter = new LectureAdapter(layoutInfl);
+        adapter = new LectureAdapter(layoutInfl);
         lectures = lectureService.getByYear(selectedYear);
         if ((lectures != null) && (!lectures.isEmpty())) {
             for (Lecture lecture : lectures) {
-                lectureAdapter.addItem(lecture);
+                adapter.addItem(lecture);
             }
-            setListAdapter(lectureAdapter);
+            setListAdapter(adapter);
         }
     }
 
@@ -72,8 +77,13 @@ public class LectureListActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         Intent intent = new Intent();
         intent.setClass(getApplicationContext(), LectureActivity.class);
-        Lecture lecture = lectureAdapter.getItem(position);
+        Lecture lecture = adapter.getItem(position);
         intent.putExtra("lecture", lecture);
+
+        final HostingPlace hostingPlace = lectureService.getHostingPlaceByEdition(edition);
+        final String hostingPlaceName = hostingPlace.getName();
+        intent.putExtra("hostingPlace", hostingPlaceName);
+
         startActivity(intent);
         overridePendingTransition(R.anim.start_in, R.anim.start_out);
     }

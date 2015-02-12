@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">08 - Flisol</string>
+    <string name="app_name">Flisol</string>
     <string name="flisol">Flisol São Carlos</string>
     <string name="about_intro">O FLISOL (Festival Latino-americano de Instalação de Software Livre) é o maior evento gratuito e sem fins lucrativos de divulgação de Software Livre da América Latina organizado pela comunidade. Ele acontece em diversas cidades do Brasil e países da América Latina desde 2004 e seu principal objetivo é promover o uso de software livre, apresentando sua filosofia, seu alcance, avanços e desenvolvimento ao público em geral.</string>
     <string name="action_settings">Configurações</string>
@@ -41,7 +41,7 @@ Para isso, além de palestras e minicursos, simultanamente acontece o Install Fe
 Além disso, o Install Fest é destinado a troca de informações e experiências entre os participantes do evento, principalmente aos iniciantes de softwares livres.</string>
     <string name="lecturer">Palestrante</string>
     <string name="license">Licença</string>
-    <string name="local">Local</string>
+    <string name="hosting_place">Local</string>
     <string name="message">Mensagem</string>
     <string name="name">Nome</string>
     <string name="notes">Observações</string>
