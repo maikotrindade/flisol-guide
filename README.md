@@ -12,7 +12,7 @@ More information coming soon.
 
 ## Collaborators
 
-	* [Maiko Trindade] (http://maikotrindade.github.io/)
+* [Maiko Trindade] (http://maikotrindade.github.io/)
 
 ## License
 <br>
