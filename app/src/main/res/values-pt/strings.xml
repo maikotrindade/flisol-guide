@@ -68,5 +68,9 @@ Além disso, o Install Fest é destinado a troca de informações e experiência
     <string name="international_flisol">FLISOL Internacional</string>
     <string name="send_email">Enviar e-mail...</string>
     <string name="send_email_error">Não há clientes de e-mail instalados.</string>
+    <string name="bronze">Bronze</string>
+    <string name="diamond">Diamante</string>
+    <string name="gold">Ouro</string>
+    <string name="silver">Prata</string>
 
 </resources>

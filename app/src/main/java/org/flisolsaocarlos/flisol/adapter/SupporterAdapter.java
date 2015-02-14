@@ -67,7 +67,7 @@ public class SupporterAdapter extends BaseAdapter {
 
         Supporter Supporter = Supporters.get(position);
         holder.nameTxt.setText(Supporter.getName());
-        holder.businessPackageTxt.setText(Supporter.getBusinessPackage());
+        holder.businessPackageTxt.setText(Supporter.getBusinessPackage().toString());
         holder.websiteTxt.setText(Supporter.getWebsite());
 
         //Supporters' images are in folder 'assets/supporter_image'and the Entity Supporter

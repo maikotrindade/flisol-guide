@@ -221,7 +221,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     ContentValues values = new ContentValues();
                     values.put(SupporterColumns.NAME, supporter.getName());
                     values.put(SupporterColumns.IMAGE, supporter.getImage());
-                    values.put(SupporterColumns.BUSINESS_PACKAGE, supporter.getBusinessPackage());
+                    values.put(SupporterColumns.BUSINESS_PACKAGE, supporter.getBusinessPackage().toString());
                     values.put(SupporterColumns.WEBSITE, supporter.getWebsite());
                     values.put(SupporterColumns.EDITION, insertedEditionId);
 

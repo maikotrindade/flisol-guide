@@ -4,7 +4,6 @@
     <string name="app_name">Flisol</string>
     <string name="current_event_year">2015</string>
     <string name="coming_soon">More information coming soon</string>
-
     <string name="costs_label">Cost</string>
     <string name="official_website">Official Website</string>
     <string name="costs">Free</string>
@@ -14,6 +13,10 @@
     <string name="lectures">Lectures</string>
     <string name="location">Location</string>
     <string name="supporters">Supporters</string>
+    <string name="diamond">Diamond</string>
+    <string name="gold">Gold</string>
+    <string name="silver">Silver</string>
+    <string name="bronze">Bronze</string>
     <string name="about">About</string>
     <string name="schedule">Schedule</string>
     <string name="name">Name</string>

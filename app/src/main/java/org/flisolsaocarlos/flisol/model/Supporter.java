@@ -1,14 +1,36 @@
 package org.flisolsaocarlos.flisol.model;
 
+import org.flisolsaocarlos.flisol.R;
+import org.flisolsaocarlos.flisol.service.ApplicationService;
+
 public class Supporter {
 
     int id;
     private String name;
     private String website;
     private String image;
-    private String businessPackage;
+    private BusinessPackage businessPackage;
 
-    public Supporter(String name, String website, String image, String businessPackage) {
+    public enum BusinessPackage {
+
+        DIAMOND(R.string.diamond),
+        GOLD(R.string.gold),
+        SILVER(R.string.silver),
+        BRONZE(R.string.bronze);
+
+        final private int resourceId;
+
+        private BusinessPackage(int resourceId) {
+            this.resourceId = resourceId;
+        }
+
+        @Override
+        public String toString() {
+            return ApplicationService.getInstance().getString(resourceId);
+        }
+    }
+
+    public Supporter(String name, String website, String image, BusinessPackage businessPackage) {
         this.name = name;
         this.website = website;
         this.image = image;
@@ -42,11 +64,11 @@ public class Supporter {
         this.website = website;
     }
 
-    public String getBusinessPackage() {
+    public BusinessPackage getBusinessPackage() {
         return businessPackage;
     }
 
-    public void setBusinessPackage(String businessPackage) {
+    public void setBusinessPackage(BusinessPackage businessPackage) {
         this.businessPackage = businessPackage;
     }
 
