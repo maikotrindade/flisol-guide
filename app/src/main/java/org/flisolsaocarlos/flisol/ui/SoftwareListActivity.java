@@ -2,6 +2,7 @@ package org.flisolsaocarlos.flisol.ui;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -13,14 +14,20 @@ import org.flisolsaocarlos.flisol.service.SoftwareService;
 
 import java.util.List;
 
+import de.keyboardsurfer.android.widget.crouton.Configuration;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
 public class SoftwareListActivity extends ListActivity {
 
     SoftwareAdapter adapter;
     SoftwareService service;
     List<Software> softwares;
-    //TODO update year
+    private Crouton crouton;
+
+    //TODO update software data
     // this selects the current year, purposely not programmatically
-    private int year = 2014;
+    private int year = 2015;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +49,24 @@ public class SoftwareListActivity extends ListActivity {
             }
         }
         setListAdapter(adapter);
+
+        if (softwares.isEmpty()) {
+            userFeedback();
+        }
+    }
+
+    public void userFeedback() {
+        final String backgroundColor = "#EF6C00";
+        final int textSize = 18;
+
+        Style style = new Style.Builder()
+                .setBackgroundColorValue(Color.parseColor(backgroundColor))
+                .setTextSize(textSize)
+                .setConfiguration(new Configuration.Builder().setDuration(Configuration.DURATION_INFINITE).build())
+                .build();
+
+        crouton = Crouton.makeText(this, getResources().getString(R.string.coming_soon), style);
+        crouton.show();
     }
 
     @Override
@@ -66,5 +91,12 @@ public class SoftwareListActivity extends ListActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Crouton.cancelAllCroutons();
     }
 }

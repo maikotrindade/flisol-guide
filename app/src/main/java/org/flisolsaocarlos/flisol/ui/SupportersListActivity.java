@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -20,12 +21,18 @@ import org.flisolsaocarlos.flisol.service.SupporterService;
 
 import java.util.List;
 
+import de.keyboardsurfer.android.widget.crouton.Configuration;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
 public class SupportersListActivity extends ListActivity {
 
     private SupporterService service;
     private SupporterAdapter adapter;
     private Supporter supporter;
-    //TODO update supporter data and delete the dummy data from JSON
+    private Crouton crouton;
+
+    //TODO update supporter data
     // this selects the current year, purposely not programmatically
     private int currentYear = 2015;
 
@@ -46,6 +53,10 @@ public class SupportersListActivity extends ListActivity {
             }
         }
         setListAdapter(adapter);
+
+        if (supporters.isEmpty()) {
+            userFeedback();
+        }
     }
 
     @Override
@@ -75,6 +86,20 @@ public class SupportersListActivity extends ListActivity {
         startActivity(intent);
     }
 
+    public void userFeedback() {
+        final String backgroundColor = "#EF6C00";
+        final int textSize = 18;
+
+        Style style = new Style.Builder()
+                .setBackgroundColorValue(Color.parseColor(backgroundColor))
+                .setTextSize(textSize)
+                .setConfiguration(new Configuration.Builder().setDuration(Configuration.DURATION_INFINITE).build())
+                .build();
+
+        crouton = Crouton.makeText(this, getResources().getString(R.string.coming_soon), style);
+        crouton.show();
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -97,5 +122,11 @@ public class SupportersListActivity extends ListActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Crouton.cancelAllCroutons();
     }
 }
