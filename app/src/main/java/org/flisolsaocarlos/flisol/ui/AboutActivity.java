@@ -12,8 +12,8 @@ import org.flisolsaocarlos.flisol.R;
 
 public class AboutActivity extends Activity implements View.OnClickListener {
 
-        private Button contactBtn, aboutBtn, gitoriousBtn,
-                websiteBtn, interWebsiteBtn;
+        private Button contactBtn, aboutBtn, websiteBtn,
+                interWebsiteBtn, gitoriousBtn, githubBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +25,6 @@ public class AboutActivity extends Activity implements View.OnClickListener {
         aboutBtn = (Button) findViewById(R.id.aboutBtn);
         aboutBtn.setOnClickListener(this);
 
-        gitoriousBtn = (Button) findViewById(R.id.gitoriousBtn);
-        gitoriousBtn.setOnClickListener(this);
-
         websiteBtn = (Button) findViewById(R.id.localWebsiteBtn);
         websiteBtn.setOnClickListener(this);
 
@@ -36,6 +33,12 @@ public class AboutActivity extends Activity implements View.OnClickListener {
 
         interWebsiteBtn = (Button) findViewById(R.id.interWebsiteBtn);
         interWebsiteBtn.setOnClickListener(this);
+
+        gitoriousBtn = (Button) findViewById(R.id.gitoriousBtn);
+        gitoriousBtn.setOnClickListener(this);
+
+        githubBtn = (Button) findViewById(R.id.githubBtn);
+        githubBtn.setOnClickListener(this);
     }
 
     @Override
@@ -55,11 +58,6 @@ public class AboutActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 overridePendingTransition(R.anim.start_in, R.anim.start_out);
                 break;
-            case R.id.gitoriousBtn:
-                final String gitoriousUrl = getResources().getString(R.string.gitorious_project_link);
-                i.setData(Uri.parse(gitoriousUrl));
-                startActivity(i);
-                break;
             case R.id.localWebsiteBtn:
                 final String websiteUrl = getResources().getString(R.string.hosting_place_website_link);
                 i.setData(Uri.parse(websiteUrl));
@@ -73,6 +71,16 @@ public class AboutActivity extends Activity implements View.OnClickListener {
             case R.id.contactBtn:
                 final String contactUrl = getResources().getString(R.string.contact_flisol_url);
                 i.setData(Uri.parse(contactUrl));
+                startActivity(i);
+                break;
+            case R.id.gitoriousBtn:
+                final String gitoriousUrl = getResources().getString(R.string.gitorious_project_link);
+                i.setData(Uri.parse(gitoriousUrl));
+                startActivity(i);
+                break;
+            case R.id.githubBtn:
+                final String githubUrl = getResources().getString(R.string.github_project_link);
+                i.setData(Uri.parse(githubUrl));
                 startActivity(i);
                 break;
         }

@@ -74,6 +74,7 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="software_livre_url" translatable="false">http://softwarelivre.org/flisolsaocarlos</string>
     <string name="facebook_url" translatable="false">https://www.facebook.com/flisolsaocarlos</string>
     <string name="gitorious_project_link" translatable="false">https://gitorious.org/flisol-guide</string>
+    <string name="github_project_link" translatable="false">https://github.com/maikotrindade/flisol-guide</string>
     <string name="map_marker_title" translatable="false">Flisol São Carlos (Senac São Carlos)</string>
     <string name="map_marker_snippet" translatable="false">Rua Episcopal, 700</string>
     <string name="hosting_place_address" translatable="false">Senac São Carlos - Rua Episcopal, 700</string>
@@ -86,6 +87,7 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="title_activity_more_information">More Information</string>
     <string name="title_activity_license">License</string>
     <string name="gitorious" translatable="false">Gitorious</string>
+    <string name="github" translatable="false">Github</string>
     <string name="license">License</string>
     <string name="title_activity_about_app">About the Application</string>
     <string name="title_activity_software_list">List of Softwares</string>
@@ -99,5 +101,6 @@ In addition, the Install Fest is for the exchange of information and experiences
 
     <!-- KEYS -->
     <string name="google_maps_api_key" translatable="false"> INSERT YOUR CODE HERE </string>
+
 
 </resources>
