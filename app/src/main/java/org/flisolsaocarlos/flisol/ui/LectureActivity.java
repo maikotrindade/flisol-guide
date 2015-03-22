@@ -97,8 +97,8 @@ public class LectureActivity extends Activity {
 
     @Override
     public void finish() {
-        super.finish();
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
+        super.finish();
     }
 
     @Override
@@ -111,12 +111,6 @@ public class LectureActivity extends Activity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
     }
 }
 

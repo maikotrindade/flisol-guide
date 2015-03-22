@@ -49,8 +49,8 @@ public class SupporterDaoImpl implements SupporterDao {
         final String query = "SELECT " + columns + " FROM " + Tables.EDITION + " e "
                 + "INNER JOIN " + Tables.SUPPORTER + " s "
                 + "ON e." + EditionColumns.ID + " = s." + SupporterColumns.EDITION
-                + " WHERE e." + EditionColumns.YEAR + " = ? " +
-                "ORDER BY " + SupporterColumns.NAME;
+                + " WHERE e." + EditionColumns.YEAR + " = ? ";
+                //+ "ORDER BY " + SupporterColumns.NAME;
         final Cursor cursor = database.rawQuery(query, new String[]{String.valueOf(year)});
 
         cursor.moveToFirst();
@@ -68,7 +68,7 @@ public class SupporterDaoImpl implements SupporterDao {
         Supporter supporter = new Supporter();
         supporter.setName(cursor.getString(0));
         supporter.setImage(cursor.getString(1));
-        supporter.setBusinessPackage(Supporter.BusinessPackage.valueOf(cursor.getString(2)));
+        supporter.setBusinessPackage(Supporter.BusinessPackage.valueOf((cursor.getString(2).toUpperCase())));
         supporter.setWebsite(cursor.getString(3));
 
         return supporter;

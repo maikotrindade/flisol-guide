@@ -41,6 +41,7 @@ public class SupportersListActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setIcon(R.drawable.ic_launcher_white);
+        getListView().setDivider(null);
 
         service = new SupporterService(this);
         final LayoutInflater layoutInfl = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);

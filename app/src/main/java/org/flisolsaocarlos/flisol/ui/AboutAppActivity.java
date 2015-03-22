@@ -150,8 +150,8 @@ public class AboutAppActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void finish() {
-        super.finish();
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
+        super.finish();
     }
 }
 

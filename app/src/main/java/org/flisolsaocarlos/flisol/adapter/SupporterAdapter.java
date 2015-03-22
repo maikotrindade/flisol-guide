@@ -21,7 +21,7 @@ import java.util.List;
 public class SupporterAdapter extends BaseAdapter {
 
     final static String SUPPORTER_FILE_FOLDER = "supporter_image/";
-    private List<Supporter> Supporters = new ArrayList();
+    private List<Supporter> supporters = new ArrayList();
     private LayoutInflater mInflater;
     private AssetManager assets;
 
@@ -31,18 +31,18 @@ public class SupporterAdapter extends BaseAdapter {
     }
 
     public void addItem(final Supporter Supporter) {
-        Supporters.add(Supporter);
+        supporters.add(Supporter);
         notifyDataSetChanged();
     }
 
     @Override
     public int getCount() {
-        return Supporters.size();
+        return supporters.size();
     }
 
     @Override
     public Supporter getItem(int position) {
-        return Supporters.get(position);
+        return supporters.get(position);
     }
 
     @Override
@@ -53,27 +53,44 @@ public class SupporterAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
+
+        Supporter supporter = supporters.get(position);
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.supporter_list, null);
+
+            switch (supporter.getBusinessPackage()) {
+                case DIAMOND:
+                    convertView = mInflater.inflate(R.layout.supporter_diamond_list, null);
+                    break;
+                case GOLD:
+                    convertView = mInflater.inflate(R.layout.supporter_gold_list, null);
+                    break;
+                case SILVER:
+                    convertView = mInflater.inflate(R.layout.supporter_silver_list, null);
+                    break;
+                case BRONZE:
+                    convertView = mInflater.inflate(R.layout.supporter_bronze_list, null);
+                    break;
+            }
+
             holder = new ViewHolder();
             holder.nameTxt = (TextView) convertView.findViewById(R.id.name);
             holder.websiteTxt = (TextView) convertView.findViewById(R.id.website);
             holder.logoImage = (ImageView) convertView.findViewById(R.id.logoImage);
             holder.businessPackageTxt = (TextView) convertView.findViewById(R.id.business_package);
+
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Supporter Supporter = Supporters.get(position);
-        holder.nameTxt.setText(Supporter.getName());
-        holder.businessPackageTxt.setText(Supporter.getBusinessPackage().toString());
-        holder.websiteTxt.setText(Supporter.getWebsite());
+        holder.nameTxt.setText(supporter.getName());
+        holder.businessPackageTxt.setText(supporter.getBusinessPackage().toString());
+        holder.websiteTxt.setText(supporter.getWebsite());
 
-        //Supporters' images are in folder 'assets/supporter_image'and the Entity Supporter
+        //supporters' images are in folder 'assets/supporter_image'and the Entity Supporter
         //has only the filename of its image;
         try {
-            final InputStream ims = assets.open(SUPPORTER_FILE_FOLDER + Supporter.getImage());
+            final InputStream ims = assets.open(SUPPORTER_FILE_FOLDER + supporter.getImage());
             final Drawable drawable = Drawable.createFromStream(ims, null);
             holder.logoImage.setImageDrawable(drawable);
         } catch (IOException ex) {

@@ -46,14 +46,15 @@ public class ScheduleActivity extends Activity {
 
     @Override
     public void finish() {
-        super.finish();
+
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
+        super.finish();
     }
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
         Crouton.cancelAllCroutons();
+        super.onDestroy();
     }
 
     public void userFeedback() {

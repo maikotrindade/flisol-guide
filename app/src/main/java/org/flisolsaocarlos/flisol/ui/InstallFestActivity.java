@@ -55,7 +55,7 @@ public class InstallFestActivity extends Activity implements View.OnClickListene
 
     @Override
     public void finish() {
-        super.finish();
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
+        super.finish();
     }
 }
