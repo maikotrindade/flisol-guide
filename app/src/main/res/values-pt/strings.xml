@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Flisol</string>
     <string name="flisol">Flisol São Carlos</string>
     <string name="about_intro">O FLISOL (Festival Latino-americano de Instalação de Software Livre) é o maior evento gratuito e sem fins lucrativos de divulgação de Software Livre da América Latina organizado pela comunidade. Ele acontece em diversas cidades do Brasil e países da América Latina desde 2004 e seu principal objetivo é promover o uso de software livre, apresentando sua filosofia, seu alcance, avanços e desenvolvimento ao público em geral.</string>
     <string name="action_settings">Configurações</string>
@@ -15,7 +14,6 @@
     <string name="install_fest">Install Fest</string>
     <string name="location">Localização</string>
     <string name="lectures">Palestras</string>
-    <string name="map_marker_snippet"></string>
     <string name="msg_no">não</string>
     <string name="msg_website_supporter">Você será redirecionado para a página do apoiador. Você tem certeza? </string>
     <string name="msg_yes">sim</string>
@@ -30,7 +28,6 @@
     <string name="collaborate_text">Qualquer um é bem-vindo a colaborar com a comissão organizadora do FLISOL, não é necessário ser um estudante nem mesmo um especialista no assunto para ajudar na organização ou participar do evento.</string>
     <string name="costs">Gratuito</string>
     <string name="costs_label">Custo</string>
-    <string name="current_event_year"></string>
     <string name="date" translatable="false">25 de Abril</string>
     <string name="date_label">Data</string>
     <string name="field">Área</string>
@@ -62,15 +59,19 @@ Além disso, o Install Fest é destinado a troca de informações e experiência
     <string name="your_email">Seu e-mail</string>
     <string name="your_name">Seu nome</string>
     <string name="coming_soon">Em breve mais informações</string>
-    <string name="google_maps_api_key" translatable="false"></string>
+    <string name="google_maps_api_key" translatable="false">INSIRA SEU CÓDIGO AQUI</string>
     <string name="contact_flisol">Entre em contato com a comissão organizadora do FLISOL para dúvidas, sugestões, críticas ou parcerias</string>
     <string name="contact">Contato</string>
     <string name="international_flisol">FLISOL Internacional</string>
     <string name="send_email">Enviar e-mail...</string>
     <string name="send_email_error">Não há clientes de e-mail instalados.</string>
-    <string name="bronze">Bronze</string>
+    <string name="invalid_email">E-mail Inválido</string>
+    <string name="invalid_message">Mensagem Inválida</string>
+    <string name="invalid_name">Nome Inválido</string>
+    <string name="invalid_subject">Assunto Inválido</string>
+    <string name="silver">Prata</string>
+    <string name="bronze" translatable="false">Bronze</string>
     <string name="diamond">Diamante</string>
     <string name="gold">Ouro</string>
-    <string name="silver">Prata</string>
 
 </resources>
