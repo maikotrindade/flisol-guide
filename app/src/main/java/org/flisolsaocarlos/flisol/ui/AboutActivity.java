@@ -13,7 +13,7 @@ import org.flisolsaocarlos.flisol.R;
 public class AboutActivity extends Activity implements View.OnClickListener {
 
         private Button contactBtn, aboutBtn, websiteBtn,
-                interWebsiteBtn, gitoriousBtn, githubBtn;
+                interWebsiteBtn, githubBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,6 @@ public class AboutActivity extends Activity implements View.OnClickListener {
 
         interWebsiteBtn = (Button) findViewById(R.id.interWebsiteBtn);
         interWebsiteBtn.setOnClickListener(this);
-
-        gitoriousBtn = (Button) findViewById(R.id.gitoriousBtn);
-        gitoriousBtn.setOnClickListener(this);
 
         githubBtn = (Button) findViewById(R.id.githubBtn);
         githubBtn.setOnClickListener(this);
@@ -71,11 +68,6 @@ public class AboutActivity extends Activity implements View.OnClickListener {
             case R.id.contactBtn:
                 final String contactUrl = getResources().getString(R.string.contact_flisol_url);
                 i.setData(Uri.parse(contactUrl));
-                startActivity(i);
-                break;
-            case R.id.gitoriousBtn:
-                final String gitoriousUrl = getResources().getString(R.string.gitorious_project_link);
-                i.setData(Uri.parse(gitoriousUrl));
                 startActivity(i);
                 break;
             case R.id.githubBtn:

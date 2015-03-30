@@ -211,21 +211,12 @@
                 android:text="@string/about" />
 
             <Button
-                android:id="@+id/gitoriousBtn"
-                style="@style/DefaultButton"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_below="@id/appInfo"
-                android:layout_toRightOf="@id/aboutBtn"
-                android:text="@string/gitorious" />
-
-            <Button
                 android:id="@+id/githubBtn"
                 style="@style/DefaultButton"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_below="@id/appInfo"
-                android:layout_toRightOf="@id/gitoriousBtn"
+                android:layout_toRightOf="@id/aboutBtn"
                 android:text="@string/github" />
         </RelativeLayout>
 

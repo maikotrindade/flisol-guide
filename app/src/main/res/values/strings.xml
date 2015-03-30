@@ -2,17 +2,16 @@
 <resources>
 
     <!-- KEYS -->
-    <string name="google_maps_api_key"> INSERT YOUR CODE HERE </string>
+    <string name="google_maps_api_key" translatable="false">AIzaSyBY3-xmDUoaE48fWqkaJplzLEH9dOn08vA</string>
 
     <!-- untranslatable -->
     <string name="current_event_year" translatable="false">2015</string>
     <string name="developer_email" translatable="false">maikocharles@gmail.com</string>
-    <string name="diamond">Diamond</string>
+    <string name="diamond" translatable="false">Diamond</string>
     <string name="gold">Gold</string>
-    <string name="silver">Silver</string>
+    <string name="silver" translatable="false">Silver</string>
     <string name="bronze">Bronze</string>
     <string name="interval" translatable="false">-</string>
-    <string name="gitorious" translatable="false">Gitorious</string>
     <string name="github" translatable="false">Github</string>
     <string name="map_marker_title" translatable="false">Flisol São Carlos (Senac São Carlos)</string>
     <string name="map_marker_snippet" translatable="false">Rua Episcopal, 700</string>
@@ -26,7 +25,6 @@
     <string name="google_plus_url" translatable="false">https://plus.google.com/u/0/105178954936186224490</string>
     <string name="software_livre_url" translatable="false">http://softwarelivre.org/flisolsaocarlos</string>
     <string name="facebook_url" translatable="false">https://www.facebook.com/flisolsaocarlos</string>
-    <string name="gitorious_project_link" translatable="false">https://gitorious.org/flisol-guide</string>
     <string name="github_project_link" translatable="false">https://github.com/maikotrindade/flisol-guide</string>
     <string name="contact_flisol_url" translatable="false">http://www.flisolsaocarlos.net.br/contato</string>
 

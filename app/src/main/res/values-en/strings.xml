@@ -2,10 +2,6 @@
 <resources>
 
     <!-- untranslatable -->
-    <string name="diamond">Diamond</string>
-    <string name="gold" translatable="false">Gold</string>
-    <string name="silver">Silver</string>
-    <string name="bronze">Bronze</string>
 
     <!-- LINKS -->
 
@@ -82,6 +78,5 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="title_activity_supporters">Supporters</string>
     <string name="title_activity_more_information">More information</string>
     <string name="title_activity_software_list">List of Softwares</string>
-    <string name="google_maps_api_key">INSERT YOUR CODE HERE</string>
 
 </resources>

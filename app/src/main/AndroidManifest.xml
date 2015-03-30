@@ -46,7 +46,7 @@
         </activity>
         <activity
             android:name=".ui.LectureListActivity"
-            android:label="Lectures" />
+            android:label="@string/lectures" />
         <activity
             android:name=".ui.CourseListActivity"
             android:label="@string/courses" />

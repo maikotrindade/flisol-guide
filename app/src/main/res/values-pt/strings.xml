@@ -59,7 +59,6 @@ Além disso, o Install Fest é destinado a troca de informações e experiência
     <string name="your_email">Seu e-mail</string>
     <string name="your_name">Seu nome</string>
     <string name="coming_soon">Em breve mais informações</string>
-    <string name="google_maps_api_key" translatable="false">INSIRA SEU CÓDIGO AQUI</string>
     <string name="contact_flisol">Entre em contato com a comissão organizadora do FLISOL para dúvidas, sugestões, críticas ou parcerias</string>
     <string name="contact">Contato</string>
     <string name="international_flisol">FLISOL Internacional</string>
@@ -69,9 +68,5 @@ Além disso, o Install Fest é destinado a troca de informações e experiência
     <string name="invalid_message">Mensagem Inválida</string>
     <string name="invalid_name">Nome Inválido</string>
     <string name="invalid_subject">Assunto Inválido</string>
-    <string name="silver">Prata</string>
-    <string name="bronze" translatable="false">Bronze</string>
-    <string name="diamond">Diamante</string>
-    <string name="gold">Ouro</string>
 
 </resources>
