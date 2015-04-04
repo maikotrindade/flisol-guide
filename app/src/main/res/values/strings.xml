@@ -2,7 +2,7 @@
 <resources>
 
     <!-- KEYS -->
-    <string name="google_maps_api_key" translatable="false">AIzaSyBY3-xmDUoaE48fWqkaJplzLEH9dOn08vA</string>
+    <string name="google_maps_api_key" translatable="false">INSERT YOUR LICENSE HERE</string>
 
     <!-- untranslatable -->
     <string name="current_event_year" translatable="false">2015</string>
@@ -28,7 +28,7 @@
     <string name="github_project_link" translatable="false">https://github.com/maikotrindade/flisol-guide</string>
     <string name="contact_flisol_url" translatable="false">http://www.flisolsaocarlos.net.br/contato</string>
 
-    <string name="app_name" translatable="false">Flisol</string>
+    <string name="app_name" translatable="false">FLISOL São Carlos</string>
     <string name="flisol">FLISOL São Carlos</string>
     <string name="date">April 25th</string>
     <string name="coming_soon">More information coming soon</string>

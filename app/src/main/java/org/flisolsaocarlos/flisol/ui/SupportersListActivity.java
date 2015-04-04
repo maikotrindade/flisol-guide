@@ -47,7 +47,7 @@ public class SupportersListActivity extends ListActivity {
         final LayoutInflater layoutInfl = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         final AssetManager assets = getAssets();
         adapter = new SupporterAdapter(layoutInfl, assets);
-        final List<Supporter> supporters = service.getByYear(currentYear);
+        final List<Supporter> supporters = service.getByYearOrderedByPackage(currentYear);
         if (supporters != null) {
             for (Supporter supporter : supporters) {
                 adapter.addItem(supporter);

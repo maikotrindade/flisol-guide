@@ -3,25 +3,32 @@ package org.flisolsaocarlos.flisol.model;
 import org.flisolsaocarlos.flisol.R;
 import org.flisolsaocarlos.flisol.service.ApplicationService;
 
-public class Supporter {
+public class Supporter implements Comparable<Supporter> {
 
     int id;
     private String name;
     private String website;
+    private String websiteTitle;
     private String image;
     private BusinessPackage businessPackage;
 
     public enum BusinessPackage {
 
-        DIAMOND(R.string.diamond),
-        GOLD(R.string.gold),
-        SILVER(R.string.silver),
-        BRONZE(R.string.bronze);
+        DIAMOND(1, R.string.diamond),
+        GOLD(2, R.string.gold),
+        SILVER(3, R.string.silver),
+        BRONZE(4, R.string.bronze);
 
         final private int resourceId;
+        final private int id;
 
-        private BusinessPackage(int resourceId) {
+        private BusinessPackage(int id, int resourceId) {
+            this.id = id;
             this.resourceId = resourceId;
+        }
+
+        public int getId() {
+            return id;
         }
 
         @Override
@@ -30,9 +37,10 @@ public class Supporter {
         }
     }
 
-    public Supporter(String name, String website, String image, BusinessPackage businessPackage) {
+    public Supporter(String name, String website, String websiteTitle, String image, BusinessPackage businessPackage) {
         this.name = name;
         this.website = website;
+        this.websiteTitle = websiteTitle;
         this.image = image;
         this.businessPackage = businessPackage;
     }
@@ -64,6 +72,14 @@ public class Supporter {
         this.website = website;
     }
 
+    public String getWebsiteTitle() {
+        return websiteTitle;
+    }
+
+    public void setWebsiteTitle(String websiteTitle) {
+        this.websiteTitle = websiteTitle;
+    }
+
     public BusinessPackage getBusinessPackage() {
         return businessPackage;
     }
@@ -78,6 +94,16 @@ public class Supporter {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public int compareTo(Supporter supporter) {
+        if (supporter.getBusinessPackage().getId() == this.businessPackage.getId()) {
+            return 0;
+        }
+        else {
+            return  this.businessPackage.getId() - supporter.getBusinessPackage().getId();
+        }
     }
 
     @Override

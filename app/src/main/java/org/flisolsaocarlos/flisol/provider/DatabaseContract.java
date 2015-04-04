@@ -48,6 +48,7 @@ public class DatabaseContract {
         String ID = "_id";
         String NAME = "name";
         String WEBSITE = "website";
+        String WEBSITE_TITLE = "website";
         String IMAGE = "image";
         String BUSINESS_PACKAGE = "business_package";
         String EDITION = "edition_id";

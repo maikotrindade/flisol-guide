@@ -90,18 +90,6 @@ public class LectureActivity extends Activity {
     }
 
     @Override
-    public void onBackPressed() {
-        this.finish();
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
-    }
-
-    @Override
-    public void finish() {
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
-        super.finish();
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
@@ -111,6 +99,18 @@ public class LectureActivity extends Activity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.finish();
+        overridePendingTransition(R.anim.end_in, R.anim.end_out);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 }
 

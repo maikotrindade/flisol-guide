@@ -39,19 +39,6 @@ public class ScheduleActivity extends Activity {
     }
 
     @Override
-    public void onBackPressed() {
-        this.finish();
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
-    }
-
-    @Override
-    public void finish() {
-
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
-        super.finish();
-    }
-
-    @Override
     public void onDestroy() {
         Crouton.cancelAllCroutons();
         super.onDestroy();
@@ -71,4 +58,15 @@ public class ScheduleActivity extends Activity {
         crouton.show();
     }
 
+    @Override
+    public void onBackPressed() {
+        this.finish();
+        overridePendingTransition(R.anim.end_in, R.anim.end_out);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.end_in, R.anim.end_out);
+    }
 }

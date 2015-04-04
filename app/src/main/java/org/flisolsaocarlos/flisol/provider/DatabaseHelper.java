@@ -71,6 +71,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + SupporterColumns.IMAGE + " TEXT NOT NULL, "
             + SupporterColumns.BUSINESS_PACKAGE + " TEXT NOT NULL, "
             + SupporterColumns.WEBSITE + " INTEGER NOT NULL, "
+            + SupporterColumns.WEBSITE_TITLE + " TEXT NOT NULL, "
             + SupporterColumns.EDITION + " INTEGER REFERENCES " + Tables.EDITION + "( " + EditionColumns.ID + " ) ON UPDATE CASCADE)";
 
     private static final String HOSTING_PLACE_CREATE = "CREATE TABLE " +
@@ -223,6 +224,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     values.put(SupporterColumns.IMAGE, supporter.getImage());
                     values.put(SupporterColumns.BUSINESS_PACKAGE, supporter.getBusinessPackage().toString());
                     values.put(SupporterColumns.WEBSITE, supporter.getWebsite());
+                    values.put(SupporterColumns.WEBSITE_TITLE, supporter.getWebsiteTitle());
                     values.put(SupporterColumns.EDITION, insertedEditionId);
 
                     database.insert(Tables.SUPPORTER, null, values);

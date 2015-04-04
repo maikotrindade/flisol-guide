@@ -112,8 +112,8 @@ public class CourseActivity extends Activity {
 
     @Override
     public void finish() {
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
         super.finish();
+        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 }
 

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- untranslatable -->
-
-    <!-- LINKS -->
-
     <string name="flisol">FLISOL São Carlos</string>
     <string name="date">April 25th</string>
     <string name="coming_soon">More information coming soon</string>

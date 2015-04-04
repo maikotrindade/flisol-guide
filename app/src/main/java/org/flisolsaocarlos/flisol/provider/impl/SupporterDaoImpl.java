@@ -44,13 +44,14 @@ public class SupporterDaoImpl implements SupporterDao {
         String columns = SupporterColumns.NAME + ", " +
                 SupporterColumns.IMAGE + ", " +
                 SupporterColumns.BUSINESS_PACKAGE + ", " +
-                SupporterColumns.WEBSITE;
+                SupporterColumns.WEBSITE + ", " +
+                SupporterColumns.WEBSITE_TITLE;
 
-        final String query = "SELECT " + columns + " FROM " + Tables.EDITION + " e "
-                + "INNER JOIN " + Tables.SUPPORTER + " s "
-                + "ON e." + EditionColumns.ID + " = s." + SupporterColumns.EDITION
-                + " WHERE e." + EditionColumns.YEAR + " = ? ";
-                //+ "ORDER BY " + SupporterColumns.NAME;
+        final String query = "SELECT " + columns + " FROM " + Tables.EDITION + " e"
+                + " INNER JOIN " + Tables.SUPPORTER + " s"
+                + " ON e." + EditionColumns.ID + " = s." + SupporterColumns.EDITION
+                + " WHERE e." + EditionColumns.YEAR + " = ?"
+                + " ORDER BY " + SupporterColumns.NAME;
         final Cursor cursor = database.rawQuery(query, new String[]{String.valueOf(year)});
 
         cursor.moveToFirst();
@@ -70,6 +71,7 @@ public class SupporterDaoImpl implements SupporterDao {
         supporter.setImage(cursor.getString(1));
         supporter.setBusinessPackage(Supporter.BusinessPackage.valueOf((cursor.getString(2).toUpperCase())));
         supporter.setWebsite(cursor.getString(3));
+        supporter.setWebsiteTitle(cursor.getString(4));
 
         return supporter;
     }

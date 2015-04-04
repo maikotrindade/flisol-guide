@@ -48,6 +48,4 @@
         android:layout_toRightOf="@id/logoImage"
         android:paddingLeft="10dp"
         android:textSize="15sp" />
-
-
 </RelativeLayout>

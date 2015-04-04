@@ -5,6 +5,7 @@ import android.content.Context;
 import org.flisolsaocarlos.flisol.model.Supporter;
 import org.flisolsaocarlos.flisol.provider.impl.SupporterDaoImpl;
 
+import java.util.Collections;
 import java.util.List;
 
 public class SupporterService {
@@ -20,7 +21,13 @@ public class SupporterService {
         return supporterDaoImpl.findById(id);
     }
 
-    public List<Supporter> getByYear(Integer year) {
-        return supporterDaoImpl.findByEditionYear(year);
+    public List<Supporter> getByYearOrderedByPackage(Integer year) {
+        List<Supporter> supportersByYear = supporterDaoImpl.findByEditionYear(year);
+        Collections.sort(supportersByYear);
+        return supportersByYear;
     }
+
+
+
+
 }
