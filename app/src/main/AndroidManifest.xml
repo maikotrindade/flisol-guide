@@ -70,8 +70,8 @@
             android:name=".ui.WebActivity"
             android:label="" />
         <activity
-            android:name=".ui.ScheduleActivity"
-            android:label="@string/schedule" />
+            android:name=".ui.AgendaActivity"
+            android:label="@string/title_activity_agenda" />
         <activity
             android:name=".ui.CourseActivity"
             android:label="@string/title_activity_course" />

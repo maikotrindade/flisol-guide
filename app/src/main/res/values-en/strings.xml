@@ -74,5 +74,6 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="title_activity_supporters">Supporters</string>
     <string name="title_activity_more_information">More information</string>
     <string name="title_activity_software_list">List of Softwares</string>
+    <string name="agenda">Agenda</string>
 
 </resources>

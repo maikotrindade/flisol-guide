@@ -17,7 +17,7 @@
     <string name="msg_no">não</string>
     <string name="msg_website_supporter">Você será redirecionado para a página do apoiador. Você tem certeza? </string>
     <string name="msg_yes">sim</string>
-    <string name="schedule">Agenda</string>
+    <string name="schedule">Horário</string>
     <string name="supporters">Apoiadores</string>
     <string name="lecture">Palestra</string>
     <string name="freedomQuote">\"O conhecimento é a única fonte tanto para o amor como para os princípios da liberdade humana\" by Daniel Webster</string>
@@ -68,5 +68,6 @@ Além disso, o Install Fest é destinado a troca de informações e experiência
     <string name="invalid_message">Mensagem Inválida</string>
     <string name="invalid_name">Nome Inválido</string>
     <string name="invalid_subject">Assunto Inválido</string>
+    <string name="agenda">Agenda</string>
 
 </resources>
