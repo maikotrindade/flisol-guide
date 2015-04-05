@@ -11,7 +11,7 @@ import de.keyboardsurfer.android.widget.crouton.Configuration;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
-public class ScheduleActivity extends Activity {
+public class AgendaActivity extends Activity {
 
     private Crouton crouton;
 
