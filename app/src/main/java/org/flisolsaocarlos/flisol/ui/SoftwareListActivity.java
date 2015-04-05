@@ -43,16 +43,15 @@ public class SoftwareListActivity extends ListActivity {
         final LayoutInflater layoutInfl = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         adapter = new SoftwareAdapter(layoutInfl);
         softwares = service.getByYear(year);
-        if (softwares != null) {
+        if (softwares != null || softwares.isEmpty()) {
             for (Software software : softwares) {
                 adapter.addItem(software);
             }
-        }
-        setListAdapter(adapter);
-
-        if (softwares.isEmpty()) {
+        } else {
             userFeedback();
         }
+
+        setListAdapter(adapter);
     }
 
     public void userFeedback() {
@@ -80,11 +79,9 @@ public class SoftwareListActivity extends ListActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public void onBackPressed() {
         this.finish();
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 
     @Override
@@ -92,7 +89,6 @@ public class SoftwareListActivity extends ListActivity {
         super.finish();
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
-
 
     @Override
     public void onDestroy() {

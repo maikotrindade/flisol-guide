@@ -48,16 +48,15 @@ public class SupportersListActivity extends ListActivity {
         final AssetManager assets = getAssets();
         adapter = new SupporterAdapter(layoutInfl, assets);
         final List<Supporter> supporters = service.getByYearOrderedByPackage(currentYear);
-        if (supporters != null) {
+        if (supporters != null || supporters.isEmpty()) {
             for (Supporter supporter : supporters) {
                 adapter.addItem(supporter);
             }
-        }
-        setListAdapter(adapter);
-
-        if (supporters.isEmpty()) {
+        } else {
             userFeedback();
         }
+
+        setListAdapter(adapter);
     }
 
     @Override
@@ -116,7 +115,6 @@ public class SupportersListActivity extends ListActivity {
     @Override
     public void onBackPressed() {
         this.finish();
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 
     @Override

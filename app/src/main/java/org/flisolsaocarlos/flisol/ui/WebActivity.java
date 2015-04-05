@@ -33,17 +33,22 @@ public class WebActivity extends Activity {
     }
 
     @Override
-    public void finish() {
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
-        super.finish();
-    }
-
-    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
             mWebView.goBack();
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.finish();
+    }
+
+    @Override
+    public void finish() {
+        overridePendingTransition(R.anim.end_in, R.anim.end_out);
+        super.finish();
     }
 }

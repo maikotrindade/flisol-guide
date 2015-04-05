@@ -50,12 +50,11 @@ public class InstallFestActivity extends Activity implements View.OnClickListene
     @Override
     public void onBackPressed() {
         this.finish();
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 
     @Override
     public void finish() {
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
         super.finish();
+        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 }

@@ -14,7 +14,7 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
 
 
     private Button lectureBtn, courseBtn, installFestBtn, locationBtn,
-            scheduleBtn, supportersBtn, aboutBtn;
+            agendaBtn, supportersBtn, aboutBtn;
 
     private ImageButton facebookBtn, twitterBtn, googlePlusBtn, softwareLivreBtn;
 
@@ -35,8 +35,8 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
         locationBtn = (Button) findViewById(R.id.locationBtn);
         locationBtn.setOnClickListener(this);
 
-        scheduleBtn = (Button) findViewById(R.id.scheduleBtn);
-        scheduleBtn.setOnClickListener(this);
+        agendaBtn = (Button) findViewById(R.id.agendaBtn);
+        agendaBtn.setOnClickListener(this);
 
         supportersBtn = (Button) findViewById(R.id.supportersBtn);
         supportersBtn.setOnClickListener(this);
@@ -76,8 +76,8 @@ public class DashboardActivity extends Activity implements View.OnClickListener 
             case R.id.supportersBtn:
                 startActivity(SupportersListActivity.class);
                 break;
-            case R.id.scheduleBtn:
-                startActivity(ScheduleActivity.class);
+            case R.id.agendaBtn:
+                startActivity(AgendaActivity.class);
                 break;
             case R.id.aboutBtn:
                 startActivity(AboutActivity.class);

@@ -7,8 +7,8 @@ public class Supporter implements Comparable<Supporter> {
 
     int id;
     private String name;
-    private String website;
     private String websiteTitle;
+    private String website;
     private String image;
     private BusinessPackage businessPackage;
 
@@ -64,20 +64,20 @@ public class Supporter implements Comparable<Supporter> {
         this.name = name;
     }
 
-    public String getWebsite() {
-        return website;
-    }
-
-    public void setWebsite(String website) {
-        this.website = website;
-    }
-
     public String getWebsiteTitle() {
         return websiteTitle;
     }
 
     public void setWebsiteTitle(String websiteTitle) {
         this.websiteTitle = websiteTitle;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
     }
 
     public BusinessPackage getBusinessPackage() {

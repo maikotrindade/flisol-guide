@@ -102,7 +102,6 @@ public class CourseListActivity extends ListActivity {
     @Override
     public void onBackPressed() {
         this.finish();
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 
     @Override

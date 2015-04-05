@@ -10,6 +10,8 @@ import android.widget.Button;
 
 import org.flisolsaocarlos.flisol.R;
 
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+
 public class AboutActivity extends Activity implements View.OnClickListener {
 
         private Button contactBtn, aboutBtn, websiteBtn,
@@ -86,19 +88,23 @@ public class AboutActivity extends Activity implements View.OnClickListener {
                 this.finish();
                 return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public void onBackPressed() {
         this.finish();
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 
     @Override
     public void finish() {
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
         super.finish();
+        overridePendingTransition(R.anim.end_in, R.anim.end_out);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Crouton.cancelAllCroutons();
     }
 }

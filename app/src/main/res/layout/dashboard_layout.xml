@@ -25,9 +25,9 @@
         android:layout_weight="0.15">
 
         <Button
-            android:id="@+id/scheduleBtn"
+            android:id="@+id/agendaBtn"
             style="@style/dashboardButton"
-            android:text="@string/schedule" />
+            android:text="@string/agenda" />
     </LinearLayout>
 
     <LinearLayout

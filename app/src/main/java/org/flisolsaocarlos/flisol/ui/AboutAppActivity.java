@@ -145,7 +145,6 @@ public class AboutAppActivity extends Activity implements View.OnClickListener {
     @Override
     public void onBackPressed() {
         this.finish();
-        overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 
     @Override
