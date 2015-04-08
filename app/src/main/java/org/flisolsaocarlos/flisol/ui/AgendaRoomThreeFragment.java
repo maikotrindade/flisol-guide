@@ -25,9 +25,9 @@ import android.view.ViewGroup;
 
 import org.flisolsaocarlos.flisol.R;
 
-public class AgendaRoomOneFragment extends Fragment  {
+public class AgendaRoomThreeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.agenda_room_one_fragment, container, false);
+        return inflater.inflate(R.layout.agenda_room_three_fragment, container, false);
     }
 }

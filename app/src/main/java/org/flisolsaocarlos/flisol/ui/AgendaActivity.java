@@ -30,10 +30,9 @@ public class AgendaActivity extends FragmentActivity {
         mTabHost.addTab(mTabHost.newTabSpec("tab1").setIndicator("Tab1"),
                 AgendaRoomOneFragment.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("tab2").setIndicator("Tab2"),
-                AgendaRoomOneFragment.class, null);
+                AgendaRoomTwoFragment.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("tab3").setIndicator("Tab3"),
-                AgendaRoomOneFragment.class, null);
-
+                AgendaRoomThreeFragment.class, null);
     }
 
     @Override
