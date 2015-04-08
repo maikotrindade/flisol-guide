@@ -1,23 +1,9 @@
-## Flisol Android Application
+## Aplicativo Livre Flisol
 
-More information coming soon.
+![aplicativo_android-flisol](http://www.flisolsaocarlos.net.br/wp-content/aplicativo-flisol/capaGooglePlay-MINI.png)
 
-## About 
 
-### Screenshots
+O objetivo deste projeto é facilitar o acesso da comunidade às informações sobre o FLISOL São Carlos, tais como palestras, minicursos e install fest, além de exibir a localização, apoio e agenda do evento. Além disso, o projeto visa disponibilizar um aplicativo livre para que qualquer comissão organizadora do FLISOL possa usá-lo em sua cidade.
 
-### Video
 
-### Libraries
-
-## Collaborators
-
-* [Maiko Trindade] (http://maikotrindade.github.io/)
-
-## License
-<br>
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
+Para mais informações acesse o [Wiki] (https://github.com/maikotrindade/flisol-guide/wiki) do projeto.
