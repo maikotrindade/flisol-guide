@@ -2,7 +2,7 @@
 <resources>
 
     <!-- KEYS -->
-    <string name="google_maps_api_key" translatable="false">INSERT YOUR LICENSE HERE</string>
+    <string name="google_maps_api_key" translatable="false">AIzaSyBY3-xmDUoaE48fWqkaJplzLEH9dOn08vA</string>
 
     <!-- untranslatable -->
     <string name="current_event_year" translatable="false">2015</string>
@@ -93,6 +93,7 @@
     <string name="vacancies">Vacancies</string>
     <string name="collaborate">Collaborate</string>
     <string name="contact">Contact</string>
+    <string name="google_maps_key_instructions">Before you run your application, you need a Google Maps API key. To get one, follow this link: https://console.developers.google.com</string>
     <string name="contact_flisol">Contact the organizing committee of FLISOL for questions, suggestions, criticism or partnerships.</string>
     <string name="collaborate_text">Anyone is welcome to collaborate with organizing committee of FLISOL, it is not necessary to be a student even to be an expert in the subject to help the organization or participate of the event.</string>
     <string name="app_info">App Information</string>

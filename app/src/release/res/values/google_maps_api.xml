@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="google_maps_key_instructions">
-        <!--
-    TODO: Before you run your application, you need a Google Maps API key.
-
-    To get one, follow this link, follow the directions and press "Create" at the end:
-
-https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=57:AF:55:F7:B0:DE:C5:9F:19:C0:3E:65:77:3F:A8:03:C8:6C:5C:BD%3Bbr.trindade.flisolapp.ui
-
-    You can also add your credentials to an existing key, using this line:
-    57:AF:55:F7:B0:DE:C5:9F:19:C0:3E:65:77:3F:A8:03:C8:6C:5C:BD;br.trindade.flisolapp.ui
-
-    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
-    string in this file.
-        -->
-    </string>
-    <string name="google_maps_key" templateMergeStrategy="preserve">YOUR_KEY_HERE</string>
-
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">AIzaSyBY3-xmDUoaE48fWqkaJplzLEH9dOn08vA</string>
+    <string name="google_maps_key_instructions">Before you run your application, you need a Google Maps API key. To get one, follow this link: https://console.developers.google.com</string>
 </resources>

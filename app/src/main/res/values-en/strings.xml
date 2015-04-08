@@ -2,7 +2,6 @@
 <resources>
 
     <string name="flisol">FLISOL São Carlos</string>
-    <string name="date">April 25th</string>
     <string name="coming_soon">More information coming soon</string>
     <string name="costs_label">Cost</string>
     <string name="official_website">Official Website</string>
@@ -17,6 +16,7 @@
     <string name="license">License</string>
     <string name="schedule">Schedule</string>
     <string name="name">Name</string>
+    <string name="google_maps_key_instructions">Before you run your application, you need a Google Maps API key. To get one, follow this link: https://console.developers.google.com</string>
     <string name="website">Website</string>
     <string name="notes">Notes</string>
     <string name="category">Category</string>
@@ -75,5 +75,7 @@ In addition, the Install Fest is for the exchange of information and experiences
     <string name="title_activity_more_information">More information</string>
     <string name="title_activity_software_list">List of Softwares</string>
     <string name="agenda">Agenda</string>
+    <string name="title_activity_agenda">Agenda</string>
+    <string name="date">April 25th</string>
 
 </resources>
