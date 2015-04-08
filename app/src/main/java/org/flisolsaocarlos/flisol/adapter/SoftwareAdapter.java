@@ -50,6 +50,7 @@ public class SoftwareAdapter extends BaseAdapter {
             holder.nameTxt = (TextView) convertView.findViewById(R.id.name);
             holder.websiteTxt = (TextView) convertView.findViewById(R.id.website);
             holder.notesTxt = (TextView) convertView.findViewById(R.id.notes);
+            holder.notesLabel = (TextView) convertView.findViewById(R.id.notes_label);
             holder.categoryTxt = (TextView) convertView.findViewById(R.id.category);
             holder.versionTxt = (TextView) convertView.findViewById(R.id.version);
             convertView.setTag(holder);
@@ -58,12 +59,18 @@ public class SoftwareAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Software Software = softwares.get(position);
-        holder.nameTxt.setText(Software.getName());
-        holder.websiteTxt.setText(Software.getWebsite());
-        holder.notesTxt.setText(Software.getNotes());
-        holder.categoryTxt.setText(Software.getCategory());
-        holder.versionTxt.setText(Software.getVersion());
+        Software software = softwares.get(position);
+        holder.nameTxt.setText(software.getName());
+        holder.websiteTxt.setText(software.getWebsite());
+        holder.categoryTxt.setText(software.getCategory());
+        holder.versionTxt.setText(software.getVersion());
+
+        if(software.getNotes().isEmpty()) {
+            holder.notesTxt.setVisibility(View.GONE);
+            holder.notesLabel.setVisibility(View.GONE);
+        } else {
+            holder.notesTxt.setText(software.getNotes());
+        }
 
         return convertView;
     }
@@ -72,6 +79,7 @@ public class SoftwareAdapter extends BaseAdapter {
         public TextView nameTxt;
         public TextView websiteTxt;
         public TextView notesTxt;
+        public TextView notesLabel;
         public TextView categoryTxt;
         public TextView versionTxt;
     }

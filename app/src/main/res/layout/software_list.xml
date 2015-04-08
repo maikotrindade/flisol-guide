@@ -76,6 +76,7 @@
 
     <TableRow>
         <TextView
+            android:id="@+id/notes_label"
             android:layout_column="1"
             android:gravity="right"
             android:layout_width="wrap_content"
