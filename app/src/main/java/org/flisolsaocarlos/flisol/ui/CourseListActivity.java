@@ -42,7 +42,7 @@ public class CourseListActivity extends ListActivity {
 
     private void loadActionBarData() {
         years = courseService.getYears();
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_list, years);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_list, years);
         ActionBar.OnNavigationListener navigationListener = new ActionBar.OnNavigationListener() {
             @Override
             public boolean onNavigationItemSelected(int itemPosition, long itemId) {
@@ -57,7 +57,7 @@ public class CourseListActivity extends ListActivity {
                 return false;
             }
         };
-        getActionBar().setListNavigationCallbacks(adapter, navigationListener);
+        getActionBar().setListNavigationCallbacks(arrayAdapter, navigationListener);
     }
 
     private void listCourses() {

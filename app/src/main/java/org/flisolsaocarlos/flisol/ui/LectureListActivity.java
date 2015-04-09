@@ -22,7 +22,7 @@ import java.util.List;
 
 public class LectureListActivity extends ListActivity {
 
-    private LectureAdapter adapter;
+    private LectureAdapter lectureAdapter;
     private LectureService lectureService;
     private List<String> years;
     private List<Lecture> lectures;
@@ -43,7 +43,7 @@ public class LectureListActivity extends ListActivity {
 
     private void loadActionBarData() {
         years = lectureService.getYears();
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_list, years);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_list, years);
         ActionBar.OnNavigationListener navigationListener = new ActionBar.OnNavigationListener() {
             @Override
             public boolean onNavigationItemSelected(int itemPosition, long itemId) {
@@ -58,18 +58,18 @@ public class LectureListActivity extends ListActivity {
                 return false;
             }
         };
-        getActionBar().setListNavigationCallbacks(adapter, navigationListener);
+        getActionBar().setListNavigationCallbacks(arrayAdapter, navigationListener);
     }
 
     private void listLectures() {
         final LayoutInflater layoutInfl = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        adapter = new LectureAdapter(layoutInfl);
+        lectureAdapter = new LectureAdapter(layoutInfl);
         lectures = lectureService.getByYear(selectedYear);
         if ((lectures != null) && (!lectures.isEmpty())) {
             for (Lecture lecture : lectures) {
-                adapter.addItem(lecture);
+                lectureAdapter.addItem(lecture);
             }
-            setListAdapter(adapter);
+            setListAdapter(lectureAdapter);
         }
     }
 
@@ -77,7 +77,7 @@ public class LectureListActivity extends ListActivity {
     protected void onListItemClick(ListView l, View v, int position, long id) {
         Intent intent = new Intent();
         intent.setClass(getApplicationContext(), LectureActivity.class);
-        Lecture lecture = adapter.getItem(position);
+        Lecture lecture = lectureAdapter.getItem(position);
         intent.putExtra("lecture", lecture);
 
         final HostingPlace hostingPlace = lectureService.getHostingPlaceByEdition(edition);
