@@ -17,17 +17,64 @@
 
 package org.flisolsaocarlos.flisol.ui;
 
+import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ListView;
 
-import org.flisolsaocarlos.flisol.R;
+import org.flisolsaocarlos.flisol.adapter.AgendaLectureAdapter;
+import org.flisolsaocarlos.flisol.model.Lecture;
+import org.flisolsaocarlos.flisol.service.ApplicationService;
+import org.flisolsaocarlos.flisol.service.LectureService;
 
-public class AgendaRoomOneFragment extends Fragment  {
+import java.util.List;
+
+public class AgendaRoomOneFragment extends ListFragment {
+
+    private AgendaLectureAdapter lectureAdapter;
+    private LectureService lectureService;
+    private List<Lecture> lectures;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.agenda_room_one_fragment, container, false);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        lectureService = new LectureService();
+        Context context = ApplicationService.getInstance().getApplicationContext();
+        final LayoutInflater layoutInfl = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        lectureAdapter = new AgendaLectureAdapter(layoutInfl);
+        lectures = lectureService.getByYearAndRoom(2015, "Sala 1");
+        if ((lectures != null) && (!lectures.isEmpty())) {
+            for (Lecture lecture : lectures) {
+                lectureAdapter.addItem(lecture);
+            }
+            setListAdapter(lectureAdapter);
+        }
     }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        // do something with the data
+    }
+
+
+
+
+//    @Override
+//    public void onActivityCreated(Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
+//                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+//                "Linux", "OS/2" };
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+//                android.R.layout.simple_list_item_1, values);
+//        setListAdapter(adapter);
+//    }
+//
+//    @Override
+//    public void onListItemClick(ListView l, View v, int position, long id) {
+//        // do something with the data
+//    }
 }

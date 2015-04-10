@@ -33,6 +33,9 @@ public class AgendaActivity extends FragmentActivity {
                 AgendaRoomTwoFragment.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("tab3").setIndicator("Tab3"),
                 AgendaRoomThreeFragment.class, null);
+
+
+        mTabHost.setBackgroundResource(R.drawable.tab_indicator_ab_flisol);
     }
 
     @Override

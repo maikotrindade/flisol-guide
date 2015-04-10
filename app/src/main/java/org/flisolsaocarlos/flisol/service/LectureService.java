@@ -38,6 +38,10 @@ public class LectureService {
         return lectureDao.findByEditionYear(year);
     }
 
+    public List<Lecture> getByYearAndRoom(int year, String room) {
+        return lectureDao.findByEditionYearAndRoom(year, room);
+    }
+
     public List<String> getYears() {
         return lectureDao.findYears();
     }
