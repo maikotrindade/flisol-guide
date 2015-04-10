@@ -80,9 +80,10 @@ public class CourseDaoImpl implements CourseDao {
                 CourseColumns.VACANCIES;
 
         final String query = "SELECT " + columns + " FROM " + Tables.EDITION + " e "
-                + "INNER JOIN " + Tables.COURSE + " c "
-                + "ON e." + EditionColumns.ID + " = c." + CourseColumns.EDITION
-                + " WHERE e." + EditionColumns.YEAR + " = ? ";
+                + " INNER JOIN " + Tables.COURSE + " c "
+                + " ON e." + EditionColumns.ID + " = c." + CourseColumns.EDITION
+                + " WHERE e." + EditionColumns.YEAR + " = ? "
+                + " ORDER BY c." + CourseColumns.TITLE;
         final Cursor cursor = database.rawQuery(query, new String[]{String.valueOf(year)});
 
         cursor.moveToFirst();

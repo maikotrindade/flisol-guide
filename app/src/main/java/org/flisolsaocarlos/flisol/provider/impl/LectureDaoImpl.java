@@ -65,7 +65,6 @@ public class LectureDaoImpl implements LectureDao {
         return lectures;
     }
 
-    @Override
     public List<Lecture> findByEditionYear(int year) {
         List<Lecture> lectures = new ArrayList<Lecture>();
         String columns = LectureColumns.TITLE + ", " +
@@ -77,9 +76,10 @@ public class LectureDaoImpl implements LectureDao {
                 LectureColumns.ROOM;
 
         final String query = "SELECT " + columns + " FROM " + Tables.EDITION + " e "
-                + "INNER JOIN " + Tables.LECTURE + " l "
-                + "ON e." + EditionColumns.ID + " = l." + LectureColumns.EDITION
-                + " WHERE e." + EditionColumns.YEAR + " = ? ";
+                + " INNER JOIN " + Tables.LECTURE + " l "
+                + " ON e." + EditionColumns.ID + " = l." + LectureColumns.EDITION
+                + " WHERE e." + EditionColumns.YEAR + " = ? "
+                + " ORDER BY l." + LectureColumns.TITLE;
         final Cursor cursor = database.rawQuery(query, new String[]{String.valueOf(year)});
 
         cursor.moveToFirst();
@@ -106,7 +106,36 @@ public class LectureDaoImpl implements LectureDao {
         return lecture;
     }
 
-    @Override
+    public List<Lecture> findByEditionYearAndRoom(int year, String room) {
+        List<Lecture> lectures = new ArrayList<Lecture>();
+        String columns = LectureColumns.TITLE + ", " +
+                LectureColumns.DESCRIPTION + ", " +
+                LectureColumns.LECTURER + ", " +
+                LectureColumns.FIELD + ", " +
+                LectureColumns.SCHEDULE_BEGIN + ", " +
+                LectureColumns.SCHEDULE_END + ", " +
+                LectureColumns.ROOM;
+
+        final String query = "SELECT " + columns + " FROM " + Tables.EDITION + " e"
+                + " INNER JOIN " + Tables.LECTURE + " l"
+                + " ON e." + EditionColumns.ID + " = l." + LectureColumns.EDITION
+                + " WHERE e." + EditionColumns.YEAR + " = ?"
+                + " AND l." + LectureColumns.ROOM + " LIKE '" + room + "'"
+                + " ORDER BY l." + LectureColumns.SCHEDULE_BEGIN;
+        final Cursor cursor = database.rawQuery(query, new String[]{String.valueOf(year)});
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Lecture lecture = cursorToLecture(cursor);
+            lectures.add(lecture);
+            cursor.moveToNext();
+        }
+        cursor.close();
+
+        return lectures;
+    }
+
+
     public Lecture create(Lecture lecture) {
 
         ContentValues values = new ContentValues();
