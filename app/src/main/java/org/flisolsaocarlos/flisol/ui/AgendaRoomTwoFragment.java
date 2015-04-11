@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
+import org.flisolsaocarlos.flisol.R;
 import org.flisolsaocarlos.flisol.adapter.AgendaLectureAdapter;
 import org.flisolsaocarlos.flisol.model.Edition;
 import org.flisolsaocarlos.flisol.model.HostingPlace;
@@ -74,6 +75,7 @@ public class AgendaRoomTwoFragment extends ListFragment {
         intent.putExtra("hostingPlace", hostingPlaceName);
 
         startActivity(intent);
+        getActivity().overridePendingTransition(R.anim.start_in, R.anim.start_out);
     }
 
     @Override

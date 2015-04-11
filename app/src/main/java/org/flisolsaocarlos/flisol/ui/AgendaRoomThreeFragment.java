@@ -17,17 +17,74 @@
 
 package org.flisolsaocarlos.flisol.ui;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ListView;
 
 import org.flisolsaocarlos.flisol.R;
+import org.flisolsaocarlos.flisol.adapter.AgendaCourseAdapter;
+import org.flisolsaocarlos.flisol.model.Edition;
+import org.flisolsaocarlos.flisol.model.HostingPlace;
+import org.flisolsaocarlos.flisol.model.Course;
+import org.flisolsaocarlos.flisol.service.ApplicationService;
+import org.flisolsaocarlos.flisol.service.CourseService;
 
-public class AgendaRoomThreeFragment extends Fragment {
+import java.util.List;
+
+public class AgendaRoomThreeFragment extends ListFragment {
+
+    private AgendaCourseAdapter courseAdapter;
+    private CourseService courseService;
+    private List<Course> courses;
+
+    final static Integer CURRENT_YEAR = 2015;
+    final static String ROOM = "Laboratório";
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.agenda_course_fragment, container, false);
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        courseService = new CourseService();
+        Context context = ApplicationService.getInstance().getApplicationContext();
+        final LayoutInflater layoutInfl = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        courseAdapter = new AgendaCourseAdapter(layoutInfl);
+        courses = courseService.getByYearAndRoom(CURRENT_YEAR, ROOM);
+        if ((courses != null) && (!courses.isEmpty())) {
+            for (Course course : courses) {
+                courseAdapter.addItem(course);
+            }
+            setListAdapter(courseAdapter);
+        }
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        Intent intent = new Intent();
+        intent.setClass(ApplicationService.getInstance(), CourseActivity.class);
+        Course course = courseAdapter.getItem(position);
+        intent.putExtra("course", course);
+
+        final Edition edition = courseService.getEditionByYear(CURRENT_YEAR);
+        final HostingPlace hostingPlace = courseService.getHostingPlaceByEdition(edition);
+        final String hostingPlaceName = hostingPlace.getName();
+        intent.putExtra("hostingPlace", hostingPlaceName);
+
+        startActivity(intent);
+        getActivity().overridePendingTransition(R.anim.start_in, R.anim.start_out);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

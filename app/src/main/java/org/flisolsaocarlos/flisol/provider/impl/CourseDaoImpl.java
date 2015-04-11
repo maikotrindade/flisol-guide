@@ -97,6 +97,36 @@ public class CourseDaoImpl implements CourseDao {
         return courses;
     }
 
+    public List<Course> findByYearAndRoom(int year, String room) {
+        List<Course> courses = new ArrayList<Course>();
+        String columns = CourseColumns.TITLE + ", " +
+                CourseColumns.DESCRIPTION + ", " +
+                CourseColumns.LECTURER + ", " +
+                CourseColumns.FIELD + ", " +
+                CourseColumns.SCHEDULE_BEGIN + ", " +
+                CourseColumns.SCHEDULE_END + ", " +
+                CourseColumns.ROOM + ", " +
+                CourseColumns.VACANCIES;
+
+        final String query = "SELECT " + columns + " FROM " + Tables.EDITION + " e"
+                + " INNER JOIN " + Tables.COURSE + " c"
+                + " ON e." + EditionColumns.ID + " = c." + CourseColumns.EDITION
+                + " WHERE e." + EditionColumns.YEAR + " = ?"
+                + " AND c." + CourseColumns.ROOM + " LIKE '" + room + "'"
+                + " ORDER BY c." + CourseColumns.SCHEDULE_BEGIN;
+        final Cursor cursor = database.rawQuery(query, new String[]{String.valueOf(year)});
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Course course = cursorToCourse(cursor);
+            courses.add(course);
+            cursor.moveToNext();
+        }
+        cursor.close();
+
+        return courses;
+    }
+
     private Course cursorToCourse(Cursor cursor) {
         Course course = new Course();
         course.setTitle(cursor.getString(0));
@@ -111,7 +141,6 @@ public class CourseDaoImpl implements CourseDao {
         return course;
     }
 
-    @Override
     public Course create(Course course) {
 
         ContentValues values = new ContentValues();

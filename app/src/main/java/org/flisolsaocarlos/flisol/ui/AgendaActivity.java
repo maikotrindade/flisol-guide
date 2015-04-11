@@ -79,9 +79,4 @@ public class AgendaActivity extends FragmentActivity {
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        overridePendingTransition(R.anim.start_in, R.anim.start_out);
-    }
 }
