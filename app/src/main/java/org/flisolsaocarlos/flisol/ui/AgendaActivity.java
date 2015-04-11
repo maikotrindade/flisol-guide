@@ -14,7 +14,7 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class AgendaActivity extends FragmentActivity {
 
-    private FragmentTabHost mTabHost;
+    private FragmentTabHost tabHost;
     private Crouton crouton;
 
     @Override
@@ -24,18 +24,16 @@ public class AgendaActivity extends FragmentActivity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setIcon(R.drawable.ic_launcher_white);
 
-        mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
-        mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+        tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+        tabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
 
-        mTabHost.addTab(mTabHost.newTabSpec("tab1").setIndicator("Tab1"),
+        tabHost.addTab(tabHost.newTabSpec("room1").setIndicator("Sala 1"),
                 AgendaRoomOneFragment.class, null);
-        mTabHost.addTab(mTabHost.newTabSpec("tab2").setIndicator("Tab2"),
+        tabHost.addTab(tabHost.newTabSpec("room2").setIndicator("Sala 2"),
                 AgendaRoomTwoFragment.class, null);
-        mTabHost.addTab(mTabHost.newTabSpec("tab3").setIndicator("Tab3"),
+        tabHost.addTab(tabHost.newTabSpec("room3").setIndicator("Lab"),
                 AgendaRoomThreeFragment.class, null);
 
-
-        mTabHost.setBackgroundResource(R.drawable.tab_indicator_ab_flisol);
     }
 
     @Override
@@ -79,5 +77,11 @@ public class AgendaActivity extends FragmentActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.end_in, R.anim.end_out);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.start_in, R.anim.start_out);
     }
 }

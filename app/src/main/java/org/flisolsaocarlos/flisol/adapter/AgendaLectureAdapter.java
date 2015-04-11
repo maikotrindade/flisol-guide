@@ -62,6 +62,7 @@ public class AgendaLectureAdapter extends BaseAdapter {
         holder.lecturerTxt.setText(lecture.getLecturer());
         holder.scheduleBeginTxt.setText(lecture.getScheduleBegin());
         holder.scheduleEndTxt.setText(lecture.getScheduleEnd());
+
         return convertView;
     }
 

@@ -18,13 +18,17 @@
 package org.flisolsaocarlos.flisol.ui;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
 import org.flisolsaocarlos.flisol.adapter.AgendaLectureAdapter;
+import org.flisolsaocarlos.flisol.model.Edition;
+import org.flisolsaocarlos.flisol.model.HostingPlace;
 import org.flisolsaocarlos.flisol.model.Lecture;
 import org.flisolsaocarlos.flisol.service.ApplicationService;
 import org.flisolsaocarlos.flisol.service.LectureService;
@@ -37,6 +41,9 @@ public class AgendaRoomOneFragment extends ListFragment {
     private LectureService lectureService;
     private List<Lecture> lectures;
 
+    final static Integer CURRENT_YEAR = 2015;
+    final static String ROOM = "Sala 1";
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -45,7 +52,7 @@ public class AgendaRoomOneFragment extends ListFragment {
         Context context = ApplicationService.getInstance().getApplicationContext();
         final LayoutInflater layoutInfl = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         lectureAdapter = new AgendaLectureAdapter(layoutInfl);
-        lectures = lectureService.getByYearAndRoom(2015, "Sala 1");
+        lectures = lectureService.getByYearAndRoom(CURRENT_YEAR, ROOM);
         if ((lectures != null) && (!lectures.isEmpty())) {
             for (Lecture lecture : lectures) {
                 lectureAdapter.addItem(lecture);
@@ -56,25 +63,27 @@ public class AgendaRoomOneFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        // do something with the data
+        Intent intent = new Intent();
+        intent.setClass(ApplicationService.getInstance(), LectureActivity.class);
+        Lecture lecture = lectureAdapter.getItem(position);
+        intent.putExtra("lecture", lecture);
+
+        final Edition edition = lectureService.getEditionByYear(CURRENT_YEAR);
+        final HostingPlace hostingPlace = lectureService.getHostingPlaceByEdition(edition);
+        final String hostingPlaceName = hostingPlace.getName();
+        intent.putExtra("hostingPlace", hostingPlaceName);
+
+        startActivity(intent);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
-
-
-//    @Override
-//    public void onActivityCreated(Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
-//        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-//                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-//                "Linux", "OS/2" };
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-//                android.R.layout.simple_list_item_1, values);
-//        setListAdapter(adapter);
-//    }
-//
-//    @Override
-//    public void onListItemClick(ListView l, View v, int position, long id) {
-//        // do something with the data
-//    }
 }
