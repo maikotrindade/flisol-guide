@@ -563,6 +563,34 @@
                "businessPackage":"BRONZE"
             },
             {
+               "name":"Virgos",
+               "websiteTitle":"www.virgos.com.br",
+               "website":"http://www.virgos.com.br/portal3/",
+               "image":"virgos.png",
+               "businessPackage":"SILVER"
+            },
+            {
+               "name":"Auto Escola Liberdade",
+               "websiteTitle":"www.cfcliberdade.com.br",
+               "website":"http://www.cfcliberdade.com.br/",
+               "image":"liberdade.png",
+               "businessPackage":"SILVER"
+            },
+            {
+               "name":"BlueDotSoft",
+               "websiteTitle":"www.bluedotsoft.com",
+               "website":"http://www.bluedotsoft.com/",
+               "image":"bluedotsoft.png",
+               "businessPackage":"SILVER"
+            },
+            {
+               "name":"Cast IT Group",
+               "websiteTitle":"www.cast.com.br",
+               "website":"http://www.cast.com.br/cast/portal/cast",
+               "image":"cast.png",
+               "businessPackage":"DIAMOND"
+            },
+            {
                "name":"Extreme Informática",
                "websiteTitle":"Extreme Informática e Games (Facebook)",
                "website":"https://www.facebook.com/pages/Extreme-Inform%C3%A1tica-e-Games/279995402061738",
