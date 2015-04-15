@@ -1,5 +1,6 @@
 package org.flisolsaocarlos.flisol.adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,8 @@ public class AgendaLectureAdapter extends BaseAdapter {
             holder.scheduleBeginTxt = (TextView) convertView.findViewById(R.id.schedule_begin);
             holder.scheduleEndTxt = (TextView) convertView.findViewById(R.id.schedule_end);
             convertView.setTag(holder);
+            convertView.setBackgroundResource(R.drawable.custom_agenda_list);
+
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
@@ -62,6 +65,12 @@ public class AgendaLectureAdapter extends BaseAdapter {
         holder.lecturerTxt.setText(lecture.getLecturer());
         holder.scheduleBeginTxt.setText(lecture.getScheduleBegin());
         holder.scheduleEndTxt.setText(lecture.getScheduleEnd());
+
+        //TODO fix this temporary solution
+        holder.titleTxt.setTextColor(Color.parseColor("#424242"));
+        holder.lecturerTxt.setTextColor(Color.parseColor("#424242"));
+        holder.scheduleBeginTxt.setTextColor(Color.parseColor("#424242"));
+        holder.scheduleEndTxt.setTextColor(Color.parseColor("#424242"));
 
         return convertView;
     }

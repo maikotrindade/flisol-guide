@@ -1,5 +1,6 @@
 package org.flisolsaocarlos.flisol.adapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,6 +66,13 @@ public class AgendaCourseAdapter extends BaseAdapter {
         holder.scheduleBeginTxt.setText(Course.getScheduleBegin());
         holder.scheduleEndTxt.setText(Course.getScheduleEnd());
        // holder.vacanciesTxt.setText(Course.getVacancies());
+
+        //TODO fix this temporary solution
+        holder.titleTxt.setTextColor(Color.parseColor("#424242"));
+        holder.LecturerTxt.setTextColor(Color.parseColor("#424242"));
+        holder.scheduleBeginTxt.setTextColor(Color.parseColor("#424242"));
+        holder.scheduleEndTxt.setTextColor(Color.parseColor("#424242"));
+        // holder.vacanciesTxt.setTextColor(Color.parseColor("#424242"));
         return convertView;
     }
 

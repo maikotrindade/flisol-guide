@@ -33,7 +33,6 @@ public class AgendaActivity extends FragmentActivity {
                 AgendaRoomTwoFragment.class, null);
         tabHost.addTab(tabHost.newTabSpec("room3").setIndicator("Lab"),
                 AgendaRoomThreeFragment.class, null);
-
     }
 
     @Override

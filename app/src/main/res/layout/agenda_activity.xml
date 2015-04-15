@@ -19,6 +19,7 @@ tools:context="br.trindade.flisol.ui.AgendaActivity">
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#F57C00"
         android:layout_weight="0"/>
 
     <FrameLayout
