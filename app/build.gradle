@@ -22,7 +22,7 @@ android {
         applicationId "org.flisolsaocarlos.flisol"
         minSdkVersion 15
         targetSdkVersion 16
-        versionCode 3
+        versionCode 4
         versionName "0.9"
     }
     buildTypes {

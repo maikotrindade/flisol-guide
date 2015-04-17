@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.flisolsaocarlos.flisol"
+    package="org.flisolsaocarlos.flisolapp"
     android:installLocation="preferExternal"
     android:versionCode="1"
     android:versionName="0.1" >
@@ -22,7 +22,7 @@
         android:required="true" />
 
     <application
-        android:name=".service.ApplicationService"
+        android:name="org.flisolsaocarlos.flisolapp.service.ApplicationService"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -35,7 +35,7 @@
             android:value="@string/google_maps_api_key" />
 
         <activity
-            android:name=".ui.DashboardActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.DashboardActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar" >
             <intent-filter>
@@ -45,41 +45,41 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.LectureListActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.LectureListActivity"
             android:label="@string/lectures" />
         <activity
-            android:name=".ui.CourseListActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.CourseListActivity"
             android:label="@string/courses" />
         <activity
-            android:name=".ui.InstallFestActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.InstallFestActivity"
             android:label="@string/install_fest" />
         <activity
-            android:name=".ui.LectureActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.LectureActivity"
             android:label="@string/lecture" />
         <activity
-            android:name=".ui.LocationFragmentActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.LocationFragmentActivity"
             android:label="@string/location"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity
-            android:name=".ui.SupportersListActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.SupportersListActivity"
             android:label="@string/supporters" />
         <activity
-            android:name=".ui.AboutActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.AboutActivity"
             android:label="@string/title_activity_about" />
         <activity
-            android:name=".ui.WebActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.WebActivity"
             android:label="" />
         <activity
-            android:name=".ui.AgendaActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.AgendaActivity"
             android:label="@string/title_activity_agenda" />
         <activity
-            android:name=".ui.CourseActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.CourseActivity"
             android:label="@string/title_activity_course" />
         <activity
-            android:name=".ui.AboutAppActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.AboutAppActivity"
             android:label="@string/title_activity_about_app" />
         <activity
-            android:name=".ui.SoftwareListActivity"
+            android:name="org.flisolsaocarlos.flisolapp.ui.SoftwareListActivity"
             android:label="@string/title_activity_software_list" >
         </activity>
     </application>

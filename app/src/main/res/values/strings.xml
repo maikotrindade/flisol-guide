@@ -105,11 +105,5 @@
 Therefore, in addition to lectures and courses, simultaneously the Install Fest occurs: Community people can bring their computers to the FLISOL team can install free software, especially Linux distributions for free.
 In addition, the Install Fest is for the exchange of information and experiences among the participants of the event, especially for beginners of free software.
 </string>
-    <string name="title_activity_agenda_room_one">AgendaRoomOneActivity</string>
-
-    <string name="hello_world">Hello world!</string>
-
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

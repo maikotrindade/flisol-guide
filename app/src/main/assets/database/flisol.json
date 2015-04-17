@@ -496,11 +496,21 @@
                "scheduleEnd":"14:00",
                "room":"Sala 1"
             },
+
             {
-               "title":"Jornalismo, Blogging\tWordpress: da produção livre de conteúdo em blogs ao e-commerce empresarial",
+               "title":"Mundo Linux, Certificação Profissional  & Certificação em Linux",
+               "description":"Mundo Linux, Certificação Profissional  & Certificação em Linux",
+               "lecturer":"José Carlos Gouveia",
+               "field":"Programação / Desenvolvimento de Software",
+               "scheduleBegin":"14:00",
+               "scheduleEnd":"15:00",
+               "room":"Sala 1"
+            },
+            {
+               "title":"Wordpress: da produção livre de conteúdo em blogs ao e-commerce empresarial",
                "description":"O Wordpress é atualmente a ferramenta de gerenciamento de conteúdos na web mais usada. Foi concebido inicialmente para gerenciamento de blogs mas é usado hoje para o gerenciamento de qualquer tipo de site. Esses sites podem ser um simples blog até um e-commerce profissional, passando por portais de notícias, sites institucionais e outros. Com início numa abordagem histórica da interação social na internet a palestra tem mostra o wordpress como um software livre com amplas possibilidades. Desde de atuação no mercado assim como a criação de notícias e conteúdo livre visando a ampliação e democratização da comunicação.",
                "lecturer":"Rodrigo Barreto",
-               "field":"Programação / Desenvolvimento de Software",
+               "field":"Programação / Desenvolvimento de Software, Jornalismo, Blogging",
                "scheduleBegin":"15:00",
                "scheduleEnd":"16:00",
                "room":"Sala 1"
