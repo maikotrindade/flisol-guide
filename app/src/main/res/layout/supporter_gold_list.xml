@@ -2,18 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="8dp"
+    android:paddingBottom="7dp"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="8dp"
+    android:paddingTop="7dp"
 
     tools:context="br.trindade.flisol.ui.SupporterListActivity">
 
     <com.makeramen.RoundedImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/logoImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_centerVertical="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/supporter"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/logoImage"
         android:paddingLeft="10dp"
-        android:textSize="14sp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/website"
@@ -42,8 +42,8 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
         android:layout_below="@id/website"
         android:layout_toRightOf="@id/logoImage"
         android:layout_marginLeft="10dp"
