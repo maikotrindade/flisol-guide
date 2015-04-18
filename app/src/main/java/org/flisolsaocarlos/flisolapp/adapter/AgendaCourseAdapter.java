@@ -53,7 +53,6 @@ public class AgendaCourseAdapter extends BaseAdapter {
             holder.LecturerTxt = (TextView) convertView.findViewById(R.id.lecturer);
             holder.scheduleBeginTxt = (TextView) convertView.findViewById(R.id.schedule_begin);
             holder.scheduleEndTxt = (TextView) convertView.findViewById(R.id.schedule_end);
-          //  holder.vacanciesTxt = (TextView) convertView.findViewById(R.id.vacancies);
             convertView.setTag(holder);
             convertView.setBackgroundResource(R.drawable.custom_list);
         } else {
@@ -65,14 +64,12 @@ public class AgendaCourseAdapter extends BaseAdapter {
         holder.LecturerTxt.setText(Course.getLecturer());
         holder.scheduleBeginTxt.setText(Course.getScheduleBegin());
         holder.scheduleEndTxt.setText(Course.getScheduleEnd());
-       // holder.vacanciesTxt.setText(Course.getVacancies());
 
         //TODO fix this temporary solution
         holder.titleTxt.setTextColor(Color.parseColor("#424242"));
         holder.LecturerTxt.setTextColor(Color.parseColor("#424242"));
         holder.scheduleBeginTxt.setTextColor(Color.parseColor("#424242"));
         holder.scheduleEndTxt.setTextColor(Color.parseColor("#424242"));
-        // holder.vacanciesTxt.setTextColor(Color.parseColor("#424242"));
         return convertView;
     }
 
@@ -81,7 +78,6 @@ public class AgendaCourseAdapter extends BaseAdapter {
         public TextView LecturerTxt;
         public TextView scheduleBeginTxt;
         public TextView scheduleEndTxt;
-      //  public TextView vacanciesTxt;
     }
 }
 

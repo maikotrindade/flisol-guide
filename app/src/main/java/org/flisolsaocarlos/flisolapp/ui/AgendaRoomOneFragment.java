@@ -43,7 +43,7 @@ public class AgendaRoomOneFragment extends ListFragment {
     private List<Lecture> lectures;
 
     final static Integer CURRENT_YEAR = 2015;
-    final static String ROOM = "Sala 1";
+    final static String ROOM = "Sala 205";
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {

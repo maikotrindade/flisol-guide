@@ -27,11 +27,11 @@ public class AgendaActivity extends FragmentActivity {
         tabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
         tabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
 
-        tabHost.addTab(tabHost.newTabSpec("room1").setIndicator("Sala 1"),
+        tabHost.addTab(tabHost.newTabSpec("room1").setIndicator("Sala 205"),
                 AgendaRoomOneFragment.class, null);
-        tabHost.addTab(tabHost.newTabSpec("room2").setIndicator("Sala 2"),
+        tabHost.addTab(tabHost.newTabSpec("room2").setIndicator("Sala 210"),
                 AgendaRoomTwoFragment.class, null);
-        tabHost.addTab(tabHost.newTabSpec("room3").setIndicator("Lab"),
+        tabHost.addTab(tabHost.newTabSpec("room3").setIndicator("Lab 206"),
                 AgendaRoomThreeFragment.class, null);
     }
 
