@@ -436,7 +436,7 @@
                "field":"Programação / Desenvolvimento de Software",
                "scheduleBegin":"09:00",
                "scheduleEnd":"11:00",
-               "room":"Laboratório",
+               "room":"Laboratório 206",
                "vacancies":40
             },
             {
@@ -446,7 +446,7 @@
                "field":"Programação / Desenvolvimento de Software, Hardware, Embarcados",
                "scheduleBegin":"13:00",
                "scheduleEnd":"17:00",
-               "room":"Laboratório",
+               "room":"Laboratório 206",
                "vacancies":40
             }
          ],
@@ -458,7 +458,7 @@
                "field":"Programação / Desenvolvimento de Software, Ações Sociais, Educação",
                "scheduleBegin":"16:00",
                "scheduleEnd":"17:00",
-               "room":"Sala 1"
+               "room":"Sala 205"
             },
             {
                "title":"Graph Database Application Using Neo4j",
@@ -467,7 +467,7 @@
                "field":"Programação / Desenvolvimento de Software, Banco de Dados Orientado Grafos",
                "scheduleBegin":"09:00",
                "scheduleEnd":"10:00",
-               "room":"Sala 1"
+               "room":"Sala 205"
             },
             {
                "title":"Soluções de Firewall e Monitoramento usando Software Livre",
@@ -476,7 +476,7 @@
                "field":"Infraestrutura e Redes",
                "scheduleBegin":"11:00",
                "scheduleEnd":"12:00",
-               "room":"Sala 2"
+               "room":"Sala 210"
             },
             {
                "title":"Criando aplicações ambiciosas usando Ember.js",
@@ -485,7 +485,7 @@
                "field":"Programação / Desenvolvimento de Software",
                "scheduleBegin":"10:00",
                "scheduleEnd":"11:00",
-               "room":"Sala 2"
+               "room":"Sala 210"
             },
             {
                "title":"Processos de Desenvolvimento de Software\tFluxo de desenvolvimento com Git",
@@ -494,7 +494,7 @@
                "field":"Programação / Desenvolvimento de Software",
                "scheduleBegin":"13:00",
                "scheduleEnd":"14:00",
-               "room":"Sala 1"
+               "room":"Sala 205"
             },
 
             {
@@ -504,7 +504,7 @@
                "field":"Programação / Desenvolvimento de Software",
                "scheduleBegin":"14:00",
                "scheduleEnd":"15:00",
-               "room":"Sala 1"
+               "room":"Sala 205"
             },
             {
                "title":"Wordpress: da produção livre de conteúdo em blogs ao e-commerce empresarial",
@@ -513,7 +513,7 @@
                "field":"Programação / Desenvolvimento de Software, Jornalismo, Blogging",
                "scheduleBegin":"15:00",
                "scheduleEnd":"16:00",
-               "room":"Sala 1"
+               "room":"Sala 205"
             },
             {
                "title":"Se Tranque e Jogue a Chave Fora: Como se Proteger na Era da Internet",
@@ -522,7 +522,7 @@
                "field":"Infraestrutura e Redes, Educação",
                "scheduleBegin":"10:00",
                "scheduleEnd":"11:00",
-               "room":"Sala 1"
+               "room":"Sala 205"
             },
             {
                "title":"Ferramentas Livres para a gestão de projetos Ágeis com Scrum",
@@ -531,7 +531,7 @@
                "field":"Gerenciamento de  Projetos",
                "scheduleBegin":"09:00",
                "scheduleEnd":"10:00",
-               "room":"Sala 2"
+               "room":"Sala 210"
             },
             {
                "title":"Comunicacao integrada usando SACI",
@@ -540,7 +540,7 @@
                "field":"Jornalismo",
                "scheduleBegin":"11:00",
                "scheduleEnd":"12:00",
-               "room":"Sala 1"
+               "room":"Sala 205"
             }
          ],
          "supporters":[
