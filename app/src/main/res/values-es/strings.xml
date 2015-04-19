@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flisol">FLISOL São Carlos</string>
+    <string name="date">25 de abril</string>
+    <string name="coming_soon">Más información en breve</string>
+    <string name="costs_label">Costo</string>
+    <string name="official_website">Página oficial</string>
+    <string name="costs">Gratuito</string>
+    <string name="date_label">Fecha</string>
+    <string name="courses">Minicursos</string>
+    <string name="install_fest">Install Fest</string>
+    <string name="lectures">Pláticas</string>
+    <string name="location">Localización</string>
+    <string name="supporters">Apoyadores</string>
+    <string name="about">Sobre</string>
+    <string name="license">Licencia</string>
+    <string name="schedule">Agenda</string>
+    <string name="name">Nombre</string>
+    <string name="website">Página web</string>
+    <string name="notes">Notas</string>
+    <string name="category">Categoría</string>
+    <string name="version">Versión</string>
+    <string name="software_list">Lista de Softwares</string>
+    <string name="international_flisol">FLISOL Internacional</string>
+    <string name="about_intro">El FLISOL (Festival Latinoamericano de la Instalación del Software Libre) es el mayor evento gratuito y sin fines de lucro de divulgación de Software Libre de América Latina, organizado por la comunidad. Tiene lugar en varias ciudades en Brasil y en los países de América Latina desde 2004 y su principal objetivo es promover el uso de software libre, presentando su filosofía, su alcance, avanzos y desarrollo al público en general. </string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="field">Área</string>
+    <string name="lecture">Plática</string>
+    <string name="home">Página inicial</string>
+    <string name="room">Sala</string>
+    <string name="hosting_place">Localización</string>
+    <string name="lecturer">Orador</string>
+    <string name="share">Comparta</string>
+    <string name="vacancies">Vacantes</string>
+    <string name="collaborate">Colabore</string>
+    <string name="contact">Contacto</string>
+    <string name="contact_flisol">Contacte el Comité organizador de FLISOL  para preguntar, sugerir, criticar o colaborar.</string>
+    <string name="collaborate_text">Todos son bienvenidos para colaborar con el Comité organizador de FLISOL, no es necesario ser un estudiante ni un experto en este campo para ayudar a la organización o para participar en el evento</string>
+    <string name="app_info">App Información</string>
+    <string name="by">por</string>
+    <string name="submit">Envíe</string>
+    <string name="flisolappAbout">Aplicación Android bajo el GPL v3 que proporciona la información sobre FLISOL São Carlos. La aplicación presenta la información sobre las pláticas y los cursos desde el ano 2012, como también exibe la localización, el apoyo y la agenda de la edición inminente. Por favor contacte los programadores a través del formulario abajo para crítica, colaboración o sugestiones. </string>
+    <string name="freedomQuote">\" La sabedoría es la única fuente, tanto del amor como de los princípios de la libertad humana. \" by Daniel Webster</string>
+    <string name="installFestText"> El objetivo principal del Flisol es promover el uso del software libre, proporcionando la información sobre su filosofia, alcance, progreso y desarrollo para el público en general. Por lo tanto, además de las pláticas y los minicursos, simultáneamente ocurre el Install Fest: los participantes pueden traer sus computadoras para que el equipo del Flisol pueda instalar, gratuitamente, softwares libres, especialmente las distribuciones Linux.
+Además, la intención del Flisol es el intercambio de informaciones y experiencias entre los participantes del evento, especialmente para los principiantes del software libre.</string>
+
+    <!--Diálogos y mensajes para los usuarios -->
+    <string name="msg_yes">sí</string>
+    <string name="msg_no">no</string>
+    <string name="msg_website_supporter">Usted será redireccionado a la página web del apoyador. Está seguro? </string>
+    <string name="subject">Tema</string>
+    <string name="your_name">Su Nombre</string>
+    <string name="message">Mensaje</string>
+    <string name="invalid_email">E-mail Inválido</string>
+    <string name="invalid_name">Nombre Inválido</string>
+    <string name="invalid_subject">Tema Inválido</string>
+    <string name="invalid_message">Mensaje Inválido</string>
+    <string name="your_email">Su e-mail</string>
+    <string name="send_email">Envíe un e-mail...</string>
+    <string name="send_email_error">No hay clientes de e-mail instalados.</string>
+
+    <!--Título de actividad -->
+    <string name="title_activity_course">Minicurso</string>
+    <string name="title_activity_license">Licencia</string>
+    <string name="title_activity_about_app">Sobre la Aplicación</string>
+    <string name="title_activity_about">Sobre FLISOL</string>
+    <string name="title_activity_course_list">Lista de minicursos</string>
+    <string name="title_activity_install_fest">Install Fest</string>
+    <string name="title_activity_lecture">Pláticas</string>
+    <string name="title_activity_location">Localización</string>
+    <string name="title_activity_supporters">Apoyadores</string>
+    <string name="agenda">Agenda</string>
+    <string name="google_maps_key_instructions">Antes de ejecutar la aplicación, se necesita una clave de API de Google Maps. Para conseguir uno, siga este enlace: https://console.developers.google.com</string>
+    <string name="title_activity_agenda">Agenda</string>
+    <string name="title_activity_more_information">Más Información</string>
+    <string name="title_activity_software_list">Lista de Softwares</string>
+</resources>
