@@ -56,26 +56,12 @@ public class SupporterAdapter extends BaseAdapter {
 
         Supporter supporter = supporters.get(position);
         if (convertView == null) {
-
-            switch (supporter.getBusinessPackage()) {
-                case DIAMOND:
-                    convertView = mInflater.inflate(R.layout.supporter_diamond_list, null);
-                    break;
-                case GOLD:
-                    convertView = mInflater.inflate(R.layout.supporter_gold_list, null);
-                    break;
-                case SILVER:
-                    convertView = mInflater.inflate(R.layout.supporter_silver_list, null);
-                    break;
-                case BRONZE:
-                    convertView = mInflater.inflate(R.layout.supporter_bronze_list, null);
-                    break;
-            }
-
+            convertView = mInflater.inflate(R.layout.supporter_default_list, null);
             holder = new ViewHolder();
             holder.nameTxt = (TextView) convertView.findViewById(R.id.name);
             holder.websiteTxt = (TextView) convertView.findViewById(R.id.website);
             holder.logoImage = (ImageView) convertView.findViewById(R.id.logoImage);
+            holder.businessPackageImage = (ImageView) convertView.findViewById(R.id.icon);
             holder.businessPackageTxt = (TextView) convertView.findViewById(R.id.business_package);
 
             convertView.setTag(holder);
@@ -90,9 +76,30 @@ public class SupporterAdapter extends BaseAdapter {
         //supporters' images are in folder 'assets/supporter_image'and the Entity Supporter
         //has only the filename of its image;
         try {
-            final InputStream ims = assets.open(SUPPORTER_FILE_FOLDER + supporter.getImage());
-            final Drawable drawable = Drawable.createFromStream(ims, null);
-            holder.logoImage.setImageDrawable(drawable);
+            final InputStream logoInput = assets.open(SUPPORTER_FILE_FOLDER + supporter.getImage());
+            final Drawable logoDrawable = Drawable.createFromStream(logoInput, null);
+            holder.logoImage.setImageDrawable(logoDrawable);
+
+            InputStream packageInput = null;
+            switch (supporter.getBusinessPackage()) {
+                case DIAMOND:
+                    packageInput = assets.open(SUPPORTER_FILE_FOLDER + Supporter.BusinessPackage.DIAMOND.getIcon());
+                    break;
+                case GOLD:
+                    packageInput = assets.open(SUPPORTER_FILE_FOLDER + Supporter.BusinessPackage.GOLD.getIcon());
+                    break;
+                case SILVER:
+                    packageInput = assets.open(SUPPORTER_FILE_FOLDER + Supporter.BusinessPackage.SILVER.getIcon());
+                    break;
+                case BRONZE:
+                    packageInput = assets.open(SUPPORTER_FILE_FOLDER +Supporter.BusinessPackage.BRONZE.getIcon());
+                    break;
+            }
+            if (packageInput != null) {
+                final Drawable packageDrawable = Drawable.createFromStream(packageInput, null);
+                holder.businessPackageImage.setImageDrawable(packageDrawable);
+            }
+
         } catch (IOException ex) {
             Log.e("m:", ex.toString());
         }
@@ -104,6 +111,7 @@ public class SupporterAdapter extends BaseAdapter {
         public TextView nameTxt;
         public ImageView logoImage;
         public TextView businessPackageTxt;
+        public ImageView businessPackageImage;
         public TextView websiteTxt;
     }
 }

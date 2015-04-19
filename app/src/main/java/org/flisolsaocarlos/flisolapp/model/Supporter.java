@@ -14,17 +14,19 @@ public class Supporter implements Comparable<Supporter> {
 
     public enum BusinessPackage {
 
-        DIAMOND(1, R.string.diamond),
-        GOLD(2, R.string.gold),
-        SILVER(3, R.string.silver),
-        BRONZE(4, R.string.bronze);
+        DIAMOND(1, R.string.diamond, "ic_diamond.png"),
+        GOLD(2, R.string.gold, "ic_gold_medal.png"),
+        SILVER(3, R.string.silver, "ic_silver_medal.png"),
+        BRONZE(4, R.string.bronze, "ic_bronze_medal.png");
 
         final private int resourceId;
         final private int id;
+        final private String icon;
 
-        private BusinessPackage(int id, int resourceId) {
+        private BusinessPackage(int id, int resourceId, String icon) {
             this.id = id;
             this.resourceId = resourceId;
+            this.icon = icon;
         }
 
         public int getId() {
@@ -34,6 +36,10 @@ public class Supporter implements Comparable<Supporter> {
         @Override
         public String toString() {
             return ApplicationService.getInstance().getString(resourceId);
+        }
+
+        public String getIcon() {
+            return icon;
         }
     }
 
