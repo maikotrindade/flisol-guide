@@ -463,7 +463,7 @@
             {
                "title":"Graph Database Application Using Neo4j",
                "description":"Such as relational databases, most graphs databases are OLTP databases (online transaction processing) of generic use and can be used to produce a wide range of solutions. That said, they shine particularly when the solution depends, first, on our understanding of how things are connected. This is more common than one may think. And in many cases it is not only how things are connected but often one wants to know something about the different relationships in our field - their names, qualities, weight and so on. Briefly,connectivity is the key. The graphs are the best abstraction one has to model and query the connectivity; databases graphs in turn give developers and the data specialists the ability to apply this abstraction to their specific problems. For this purpose, this work aim at using this approach to make some simulation, such as the route planner application, capable of querying connected data. Merely having keys and values is not enough; no more having data partially connected through joins semantically poor. We need both the connectivity and contextual richness to operate these solutions.",
-               "lecturer":"Steve Ataky Tsham Mpinda",
+               "lecturer":"Steve A. T. Mpinda",
                "field":"Programação / Desenvolvimento de Software, Banco de Dados Orientado Grafos",
                "scheduleBegin":"09:00",
                "scheduleEnd":"10:00",
@@ -481,7 +481,7 @@
             {
                "title":"Criando aplicações ambiciosas usando Ember.js",
                "description":"Criando aplicações sérias e robustas para web hoje é muito simples utilizando projetos open source como Ember.js. Nesta palestra mostro modos e casos de uso de Ember.js e como a comunidade brasileira tem participado.",
-               "lecturer":"Jean Lucas Monteiro Lima Cabreira",
+               "lecturer":"Jean Lucas M. L. Cabreira",
                "field":"Programação / Desenvolvimento de Software",
                "scheduleBegin":"10:00",
                "scheduleEnd":"11:00",
